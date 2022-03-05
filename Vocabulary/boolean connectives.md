@@ -1,0 +1,1 @@
+$\lor,\land,\neg,\implies,\iff$ are [[boolean connectives]]

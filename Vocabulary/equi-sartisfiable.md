@@ -1,0 +1,1 @@
+In [Mathematical logic] (a subtopic within the field of [formal logic], two formulae are **equisatisfiable** if the first formula is [[validity satifiability|satisfiable]] whenever the second is and vice versa
