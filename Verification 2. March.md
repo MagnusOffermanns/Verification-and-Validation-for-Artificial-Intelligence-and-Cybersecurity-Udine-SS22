@@ -62,9 +62,9 @@ A: Depends
 
 
 Other example:
-If all humans are mortal, and
-Socrates is human,
-then socrates is human.
+If all <mark style="background: #014E11F2;">humans</mark> are <mark style="background: #FF5582A6;">mortal</mark> , and
+<mark style="background: #ADCCFFA6;">Socrates</mark> is <mark style="background: #014E11F2;">human</mark> ,
+then <mark style="background: #ADCCFFA6;">Socrates</mark> is <mark style="background: #FF5582A6;">mortal</mark> .
 $((\forall x A(x)\rightarrow B(x)) \wedge A(y_0)) \rightarrow B(y_0)$
 
 The above formular is valid (i.e. true in every structure/interpretation). We call this a [[tautology]]

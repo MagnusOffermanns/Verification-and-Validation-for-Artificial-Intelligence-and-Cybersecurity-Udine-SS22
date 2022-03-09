@@ -179,7 +179,7 @@ for each leave that is not _unblocked_:
 	The formula is __valid__ if no branch contains a contradiction
 	
 	
-## Example:
+## Example/ Application:
 Consider a device whose internal state is encoded by $k$ bits $\underline{p}=p_1,...,p_n$
 - initial state is described by a propositional formula $\phi_{init}(\underline{p})$
 - target state is described by a propositional formula $\phi_{target}(\underline{p})$
@@ -258,5 +258,5 @@ i.e:
 $\phi= \neg \alpha \lor \exists p (p \land q)$
 
 ```ad-note
-title:[[Lemma 4 (naming)]]
+title:[[Lemma 4 (renaming)]]
 $\exists p \phi$ is equivalent to $\exists q \phi[p/q]$ if q does not appear ==free== in $\phi$
