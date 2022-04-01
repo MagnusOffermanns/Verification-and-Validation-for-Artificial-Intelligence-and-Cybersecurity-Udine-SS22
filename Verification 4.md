@@ -84,7 +84,7 @@ What does $NP$ complexity mean:
 The problem can be solved with a machine in a $\textit{non deterministic}$ in polynomial time.  When something is in the power i.e. $NP^{coNP}$ it means that the main process has a subprocess that solves $coNP$ problems
 
 Application:
-problem: does the device admit a run from initial to target state? Simmilar as in the class [[Verification 3. March]]
+problem: does the device admit a run from initial to target state? Simmilar as in the class [[Verification 3]]
 
 Consider a device whose internal state is encoded by $k$ bits $\underline{p}=p_1,...,p_n$
 - initial state is described by a propositional formula $\phi_{init}(\underline{p})$
