@@ -1,0 +1,2 @@
+If there are two structure $S,S'$ such that:
+$S \in P$ and $S \notin P$ and $S$ and $S'$ are [[elementary equivalence|elementary equivalent]] then $\text{\textcolor{red}{P is not definable in First order logic}}$

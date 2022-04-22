@@ -1,0 +1,1 @@
+$S \models \phi \iff$ Eve has a [[Strategy]] where she always wins the game over the board $G_{\phi,S}$
