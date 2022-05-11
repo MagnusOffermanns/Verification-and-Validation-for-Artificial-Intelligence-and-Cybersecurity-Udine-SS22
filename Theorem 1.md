@@ -1,0 +1,1 @@
+$S$ and $S'$ are [[n-equivalence|n-equivalent]] $\iff$ the Duplicator survives n-rounds in the [[Ehrenfeucht-Fraise game]] $G_{S,S'}$

@@ -1,5 +1,5 @@
 ---
-aliases: Ehrenfeucht-Fraise Games 
+aliases: Ehrenfeucht-Fraise Games, EF-game, EF-games 
 ---
 ==Players:==
 - <mark style="background: #014E11F2;">Duplicator</mark> :

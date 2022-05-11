@@ -1,3 +1,3 @@
 ---
-aliases: FO
+aliases: FO,First order logic
 ---

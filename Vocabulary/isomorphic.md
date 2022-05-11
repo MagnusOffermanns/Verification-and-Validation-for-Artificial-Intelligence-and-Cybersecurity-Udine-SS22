@@ -1,5 +1,5 @@
 ---
-aliases: non-isomorphic
+aliases: non-isomorphic,isomorphism
 ---
 
 In mathematics, an isomorphism is a structure-preserving mapping between two structures of the same type that can be reversed by an inverse mapping.
