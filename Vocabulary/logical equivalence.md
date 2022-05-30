@@ -1,3 +1,6 @@
+---
+aliases: logically equivalent
+---
 input:
 formula $\phi_1$
 formula $\phi_n$

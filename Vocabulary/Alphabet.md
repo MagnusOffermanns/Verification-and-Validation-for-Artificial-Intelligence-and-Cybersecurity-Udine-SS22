@@ -1,0 +1,1 @@
+Is a Finite set of [[Symbols]]
