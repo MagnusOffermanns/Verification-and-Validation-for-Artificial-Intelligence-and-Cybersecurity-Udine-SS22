@@ -1,5 +1,5 @@
-# Algorithms of [[FO - First order logic]] 
-# Model-checking
+# 1 Algorithms of [[FO - First order logic]] 
+# 2 Model-checking
 ```Python
 def model-checking:
 	if \phi = R(x1,x2...,xk): //R(x1)-> symbol itself,
@@ -25,7 +25,7 @@ What is the complexity:
 $|U^s|\cdot |\phi|$
 __PSPACE__-complete
 
-# [[Satisfiability]] 
+# 3 [[Satisfiability]] 
 Theorem (Trakhtenbrot 50') Satisfiability of [[FO - First order logic]] is undecidable
 __Proof__: by **reduction** from **Domino** to [[FO - First order logic]] 
 
@@ -193,7 +193,7 @@ __meaning__: For each domino it is not possible that it lies at two positions $N
 	 Therefore as Validity is undecidable also [[logical equivalence]] is undecidable.
 	``` 
 	
-# [[FO-theories]]
+# 4 [[FO-theories]]
 Change of perspective:
 <mark style="background: #014E11F2;">Before:</mark> we were given a formula and had to check if it holds on a structure.
 <mark style="background: #014E11F2;">Now</mark> : We have a given structure what are the formulas that hold on that Structure
@@ -205,9 +205,9 @@ $U^S =$ Universe
 $R^S,...=$ all relational Symbols
 $x^S,...=$ definition of free variables
 
-## Examples
+## 4.1 Examples
 <mark style="background: #FFB86CA6;">Note:</mark> $'='$ is always in the signature
-### $$FO[\mathbb{N},<]$$
+### 4.1.1 $$FO[\mathbb{N},<]$$
 Usecase: is the structure with which one describes discrete,linear time.
 Contains the formulas: 
 $$\exists x (x=x)$$
@@ -219,7 +219,7 @@ meaning: workaround to not define $>$ -> there is not just always a element bigg
 $$\forall xy (x=y \lor x < y \lor y <x)...$$
 meaning: the element is either equal,greater or smaller than x
 
-### $$\text{Presburg arithmetic: } FO[\mathbb{N},+]$$
-### $$\text{Peano arithmetic: } FO[\mathbb{N},+,\cdot]$$
-### $$\text{Tarski arithmetic: } FO[\mathbb{R},+,\cdot]$$
-### $$FO[\text{RadoGraph}]$$
+### 4.1.2 $$\text{Presburg arithmetic: } FO[\mathbb{N},+]$$
+### 4.1.3 $$\text{Peano arithmetic: } FO[\mathbb{N},+,\cdot]$$
+### 4.1.4 $$\text{Tarski arithmetic: } FO[\mathbb{R},+,\cdot]$$
+### 4.1.5 $$FO[\text{RadoGraph}]$$

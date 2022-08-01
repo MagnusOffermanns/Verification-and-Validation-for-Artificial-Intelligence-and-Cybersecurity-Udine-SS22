@@ -1,4 +1,4 @@
-# Model Checking problem
+# 1 Model Checking problem
 input:
 - formula $\phi$
 - structure $S$ defining a semantic for the tokens of the formular
@@ -30,7 +30,7 @@ $\models$ is equivalent to $\Rightarrow$
 and means from that the Righthand side  is the logical consequence of the Lefthand side
 ```
 
-## [[definability between logics]]
+## 1.1 [[definability between logics]]
 input:
 - formula $\phi_1$
 - Logic $L_1$
@@ -38,7 +38,7 @@ input:
 Question:
 can you rewrite $\phi_1$ valid in $L_1$ to another formula $\phi_2$ in $L_2$ for example because maybe $L_2$ has better algorithmical complexity.
 
-# [[Propositional Logic]]
+# 2 [[Propositional Logic]]
 ==vocabulary:==
 - $\sum = \{p,q,r\}$ are boolean variables
 - $\lor,\land,\neg,\implies,\iff$ are [[boolean connectives]]
@@ -61,7 +61,7 @@ example $p \land (\neg q \lor r)$ is
  $$ S \models \phi_1 \land \phi_2 \iff S \models \phi_1 \text{ and } S \models \phi_2$$
  $$S \models \phi_1 \lor \phi_2 \iff S \models \phi_1 \text{ or } S \models \phi_2$$
  
- # Model Checking
+# 3 Model Checking
  We write a program that check if the above statements are fulfilled
  
  ```python
@@ -84,7 +84,7 @@ times the size of the structure -> polynomial
 
 ==Name== EVAL and is p-complete
 
-# [[Satisfiability]]
+# 4 [[Satisfiability]]
 Short name: ==SAT==
 We look for one Structure of $S$ where the 
 ```python
@@ -123,7 +123,7 @@ The complexity is exponential time because you have to try every possible config
 One can guess the inputs $vx$ to make it non deterministic.
 
 
-# Economy of Syntax
+# 5 Economy of Syntax
 [[Lemma 1]]:
 Every formula is equivalent to one without $\iff$ and $\implies$
 
@@ -150,7 +150,7 @@ proof: exercise
 [[Corollary 1]]:
 CNF-SAT is NP-complete
 
-# [[Tableaux]]
+# 6 [[Tableaux]]
 We want to check [[Satisfiability]]
 Motto:instead of guessing the structure we guess pieces of the formula that are easy to satisfy.
 
@@ -179,7 +179,7 @@ for each leave that is not _unblocked_:
 	The formula is __valid__ if no branch contains a contradiction
 	
 	
-## Example/ Application:
+## 6.1 Example/ Application:
 Consider a device whose internal state is encoded by $k$ bits $\underline{p}=p_1,...,p_n$
 - initial state is described by a propositional formula $\phi_{init}(\underline{p})$
 - target state is described by a propositional formula $\phi_{target}(\underline{p})$
@@ -196,7 +196,7 @@ $$\phi_{reach}(\underline{p_1},....,\underline{p_n})=\phi_{init}(\underline{p_1}
 If this formula is [[validity satifiability|satisfiable]] there is a way from _init_ to _target_
 
 
-# [[QBF]] Quantified Boolean Formulas
+# 7 [[QBF]] Quantified Boolean Formulas
 <mark style="background: #014E11F2;">Vocabulary:</mark> 
 - Boolean variables $\sum = \{p,q,r...\}$
 - Boolean connectives $\land,\lor,\neg,\iff,\implies$

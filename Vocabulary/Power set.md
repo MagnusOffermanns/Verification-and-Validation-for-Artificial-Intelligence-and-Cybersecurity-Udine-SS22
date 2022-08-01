@@ -1,0 +1,1 @@
+A **power set** (or **powerset**) of a set S is the set of all subsets of S, including the empty set and S itself.

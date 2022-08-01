@@ -1,4 +1,4 @@
-# [[FO-theories]]
+# 1 [[FO-theories]]
 Change of perspective:
 <mark style="background: #014E11F2;">Before:</mark> we were given a formula and had to check if it holds on a structure.
 <mark style="background: #014E11F2;">Now</mark> : We have a given structure what are the formulas that hold on that Structure
@@ -10,9 +10,9 @@ $U^S =$ Universe
 $R^S,...=$ all relational Symbols
 $x^S,...=$ definition of free variables
 
-## Examples
+## 1.1 Examples
 <mark style="background: #FFB86CA6;">Note:</mark> $'='$ is always in the signature
-### $$FO[\mathbb{N},<]$$
+### 1.1.1 $$FO[\mathbb{N},<]$$
 Use-case: is the structure with which one describes discrete,linear time.
 <mark style="background: #FF5582A6;">NOTE: </mark>   '<' is not a relational symbol but a real relation. The total order.
 Contains the formulas: 
@@ -25,7 +25,7 @@ meaning: workaround to not define $>$ -> there is not just always a element bigg
 $$\forall xy (x=y \lor x < y \lor y <x)...$$
 meaning: the element is either equal,greater or smaller than x
 
-#### Where did the free variables go?
+#### 1.1.1.1 Where did the free variables go?
 As can be seen in the formulas above. There are no free variables. This is because there is not interpretation of free variables.
 
 For instance if we have a formula:
@@ -64,7 +64,7 @@ Result: No it is not possible (he did not explain why)
 We learn that $FO[\mathbb{N},<]$ is more powerful than$FO[\mathbb{N},+1]$ as we can not define a set that only contains $f: n \rightarrow n+1$.
 
 
-### [[Presburg arithmetic]]: $$ FO[\mathbb{N},+]$$
+### 1.1.2 [[Presburg arithmetic]]: $$ FO[\mathbb{N},+]$$
 - $\mathbb{N}$: Natural natural numbers 
 - $+$: ternary relation $+ \subseteq \mathbb{N} \times \mathbb{N} \times \mathbb{N}$ i.e. $(i,j,k) \in + \iff k=i+j$
 
@@ -91,13 +91,13 @@ $$\phi_c(x)=\exists y \phi_{A \cap B}(x,y)$$
 
 ![[Presburg_example3.png|400]]
 		
-### [[Peano arithmetic]]:  $$FO[\mathbb{N},+,\cdot]$$
+### 1.1.3 [[Peano arithmetic]]:  $$FO[\mathbb{N},+,\cdot]$$
 (sometimes undecidable (By reduction from Hilberts 10th problem, satisfiability of Diophantine equations), more powerful than [[Presburg arithmetic]])
 
 
 <mark style="background: #FF5582A6;">Question</mark> : How can this be undecidable if we reduced the $\cdot$ to $+$ in the [[Presburg arithmetic]]?
 
-### [[Tarski arithmetic]]: $$FO[\mathbb{R},+,\cdot]$$
+### 1.1.4 [[Tarski arithmetic]]: $$FO[\mathbb{R},+,\cdot]$$
 - is Decidable even though it has more elements than [[Peano arithmetic]].
 
 Applications:
@@ -105,8 +105,8 @@ Applications:
 - Invariants and abstractions, grammars equivalence,
 - kinematics & motion planning, coding theory & cryptography
 
-### $$FO[\text{RadoGraph}]$$
-#### What is a [[RadoGraph]]?
+### 1.1.5 $$FO[\text{RadoGraph}]$$
+#### 1.1.5.1 What is a [[RadoGraph]]?
 You distribute a infinite amount of nodes all over a surface. Then you throw a coin for all possible node pairs. If head you connect the two nodes. If tails you do not connect the nodes.
 
 $$Pr[G \models \phi] \text{ as a function of nodes of } G$$
@@ -148,7 +148,7 @@ Brake
 --- 
 
 How do we compare our [[FO-theories]]?
-# Logical [[reduction|reductions]]
+# 2 Logical [[reduction|reductions]]
 Recall: [[reduction|reductions]]!
 
 A reduction from P to Q  is an algorithm F that solves P using an oracle that returns solutions to Q.

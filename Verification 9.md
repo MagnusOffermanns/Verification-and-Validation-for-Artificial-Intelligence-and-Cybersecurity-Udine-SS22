@@ -164,7 +164,7 @@ $A^+=\{a\} \cup \{aa\}...$
 ## What is a [[Language]]?
 Given an [[Alphabet]] $A$ (Finite set of [[Symbols]]) a [[Word]] over A is just an element of $A^*$
 
-A [[Language]] $L$ over $A is a subset of $A^* (L \leq A^*)$  i.e. a language is a subset of words of $A^*$
+A [[Language]] $L$ over A, is a subset of $A^* (L \leq A^*)$  i.e. a language is a subset of words of $A^*$
 
 
 # Automata
@@ -212,7 +212,7 @@ The difference between $\delta$ and $\hat{\delta}$ is that one only has symbols 
 
 # [[Non Deterministic Finite State Atomata]] ([[Non Deterministic Finite State Atomata|NFA]])
 Definition:
-An [[NFA]] $\mathcal{A}$ is  a tuple ($Q,A,\delta,q_0,F$) where $Q,A,q_0$ and $F$ are defined as in [[Deterministic Finite State Automata|DFA]] except for the transition function $\delta$ where:
+An [[NFA]] $\mathcal{A}$ is  a tuple ($Q,A,\Delta,q_0,F$) where $Q,A,q_0$ and $F$ are defined as in [[Deterministic Finite State Automata|DFA]] except for the transition function $\delta$ where:
 $$\delta: Q \times A \rightarrow 2^Q$$
 That means that from one state $q$ one can reach more than one state when it gets a symbol as input. Depending on a random variable for example)
 

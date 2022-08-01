@@ -36,7 +36,7 @@ $\exists p  \forall q \forall r$ would have the quantifier depth 3
 
 Complexity: __PSPACE__-complete 
 
-# [[Satisfiability]] in [[QBF]]
+# 1 [[Satisfiability]] in [[QBF]]
 Reduces the model-checking for [[QBF]]
 [[QBF]] -> $\phi(p_1,p_2..)$ satisfiable $\iff$ $\exists p_1 \exists p_2... \phi$ holds over empty structure.
 
@@ -127,7 +127,7 @@ break
 ---
 
 [[QBF]]
-# [[FO - First order logic]]
+# 2 [[FO - First order logic]]
 <mark style="background: #014E11F2;">Vocabulary:</mark> 
 - Boolean connectives $\land,\lor,\neg,\iff,\implies$
 - $\forall,\exists$ Quantifiers
@@ -164,7 +164,7 @@ Example for a relation: Database:
 If we want to use such a tuple we write in a formula $R(x_1,x_2)$
 while $x_1$ stands for the movie name and $x_2$ stands for the release year.
 
-### Example 1:
+### 2.1.1 Example 1:
 If all <mark style="background: #014E11F2;">humans</mark> are <mark style="background: #FF5582A6;">mortal</mark> , and
 <mark style="background: #ADCCFFA6;">Socrates</mark> is <mark style="background: #014E11F2;">human</mark> ,
 then <mark style="background: #ADCCFFA6;">Socrates</mark> is <mark style="background: #FF5582A6;">mortal</mark> .
@@ -191,7 +191,7 @@ $$
 We look at unary relations. That means that all relations are subsets of the universe $U^S$. The universe can not be empty.
 
 
-### Example 2:
+### 2.1.2 Example 2:
 <mark style="background: #014E11F2;">There is a node</mark> in the graph
 that is<mark style="background: #FF5582A6;"> isolated</mark> 
 from <mark style="background: #ADCCFFA6;">all other nodes</mark> 
@@ -216,7 +216,7 @@ $$
 1. $\neg (x=y)$ means y is different from x
 2. $E(x,y)$ returns true if they have a edges that connect themselv 
 
-### Example 3:
+### 2.1.3 Example 3:
 <mark style="background: #014E11F2;">There is a man</mark> such That
 when he <mark style="background: #FF5582A6;">runs</mark> 
 <mark style="background: #ADCCFFA6;">everybody</mark> <mark style="background: #FF5582A6;">runs</mark> 
@@ -261,7 +261,7 @@ $$
  $$\phi() = \textcolor{green}{\forall} x (\textcolor{red}{R}(x) \implies \textcolor{blue}{\forall y} \textcolor{red}{R}(y))
 $$
 
-### Example 4:
+### 2.1.4 Example 4:
 
 R is a function
 
@@ -282,7 +282,7 @@ This formula means that no tuples of elements from the source set X should not p
 If one writes:
 $R(x)=...$ it means $R(x) = \forall x \exists y R(x,y) \land (\forall z R(x,z) \implies z=y)$
 
-### Example 5:
+### 2.1.5 Example 5:
 
 "$+$ is commutative" $$\phi = \forall x \forall y (x+y=y+x)$$
 
@@ -290,13 +290,13 @@ Learnings $x$ is a three way relation (ternary operation) two inputs x,y point t
 
 $$\forall x \forall y \forall z \forall z' (+(x,y,z) \land +(x,y,z')) \implies z=z'$$
 
-### Example 6:
+### 2.1.6 Example 6:
 "+ admits 0 and inverses"
 $$ \phi = \exists x \forall y \exists z (x+y=y \land y+z=x)$$
 - $\exists x \forall y x+y=y$ means there are 0 (neutral elements)
 - $\exists x \forall y \exists z y+z=x$ means there are inverses 
 
-### Example 7:
+### 2.1.7 Example 7:
 
 'f is continuous'
 $$\phi = \forall \epsilon \forall x \exists \delta  \forall y (||x-y|| < \delta \implies ||f(x)-f(y)|| < \epsilon)$$
@@ -338,7 +338,7 @@ uniform continuous $\implies$ continuous
 Example: \frac{1}{x} is continuous but not uniformly continuous in $\mathbb{R}$
 ```
 
-Here we got some exercises [[Exercises Verification 7. March class 4]]
+Here we got some exercises [[Exercises session 4]]
 
 
 

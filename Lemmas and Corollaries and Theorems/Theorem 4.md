@@ -1,0 +1,1 @@
+For every [[Finite State Automata]], there exists a [[Restricted Regular Expression]] that defines the same language and vice versa.

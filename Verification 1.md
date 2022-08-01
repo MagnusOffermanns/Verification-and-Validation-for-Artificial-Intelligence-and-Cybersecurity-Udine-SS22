@@ -9,7 +9,7 @@ Exam two parts:
 - There are optional excercises one should definitely do
 
 
-# Overview
+# 1 Overview
 1. Background knowledge: on logic, automata, regular expressions, and games
 2. Fair transition systems, automata on infinite objects
 3. Temporal logic

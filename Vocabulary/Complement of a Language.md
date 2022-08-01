@@ -1,0 +1,1 @@
+If we have a language $L \subseteq A^*$ then the [[Complement of a Language]] $\overline{L}$ consists of all all the words of the that are not part of $L$ i.e. $\overline{L}=A^*-L$

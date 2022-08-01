@@ -1,0 +1,3 @@
+# 1 How can we make that the newly constructed automata from an intersection works for mixed automata i.e. one [[Deterministic Finite State Automata|Automaton]]  being finite. The other one infinite.
+
+==probable solution== If the finite state accepts a word it goes into a final state similar to the in [[Verification 11]] introduced failure state. There it stays infinitely for each word of the alphabet $A$. As it then stays in this final state forever it counts as successful word read.

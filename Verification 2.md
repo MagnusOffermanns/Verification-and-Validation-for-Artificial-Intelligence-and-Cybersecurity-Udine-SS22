@@ -1,4 +1,4 @@
-# Introduction to logic
+# 1 Introduction to logic
 What happens when people don't use logic.
 
 Example: pentium floating point bug. -> only testing 
@@ -41,17 +41,18 @@ Create [[Negated specification]] and check for [[emptiness of product]]
 $\text{not }\phi = \text{Forever(10c or 5c)}$
 
 
-## What is a logic 
+## 1.1 What is a logic 
 a language to express object properties or systems
 or
 a set of tool to reason about properties of systems
 
-A language has three properties
-[[vocabulary]]
+A language has three properties:
 
-[[Syntax]] -> grammar how to combine them so that something has meaning
+1. [[vocabulary]] -> The symbols that can be used
 
-[[semantics]] -> meaning of formulas
+2. [[Syntax]] -> grammar how to combine them so that something has meaning
+
+3. [[semantics]] -> meaning of formulas
 
 Example:
 Q: Are you two married
@@ -140,7 +141,7 @@ How complex is it to express a certain property
 Which logic is more Succinctness -> using less tools only using nands is more succinct than using all gates
 Which logic has more efficient 
 
-## Model checking problem
+## 1.2 Model checking problem
 
 Does a model hold using a structure
 
