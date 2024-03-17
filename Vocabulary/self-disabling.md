@@ -1,0 +1,1 @@
+A transition is [[self-disabling]] if  at least the control variable is changed when executing.

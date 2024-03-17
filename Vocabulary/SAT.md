@@ -1,0 +1,1 @@
+We have the algorithm [SAT](SAT.md) to check whether a [LTL](temporal%20logic.md) formula $\varphi$ is satisfiable.

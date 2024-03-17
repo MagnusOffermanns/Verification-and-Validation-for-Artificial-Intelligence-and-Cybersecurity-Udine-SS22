@@ -1,6 +1,5 @@
-```ad-note 
-$\phi$ has [[Quantifier rank]] n if it has at most n nested quantifiers
-```
+> [!note]
+> $\phi$ has [[Quantifier rank]] n if it has at most n nested quantifiers
 
 The number of Quantifiers is  normally  much smaller than the  [[Quantifier rank]].
 

@@ -1,5 +1,5 @@
-Other examples of properties not definable in [[FO]] are:
-1. [[connectedness]]
+Other examples of properties not definable in [[FO Resolution]] are:
+1. [[Connectedness]]
 2. [[finiteness]]
 3. [[parity]] (even/odd)
 4. [[2-colorability]]

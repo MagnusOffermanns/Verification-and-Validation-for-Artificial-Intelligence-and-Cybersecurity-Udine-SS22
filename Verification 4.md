@@ -28,11 +28,10 @@ The new added parts are setting the variable $p$ to the wanted value and with th
 
 The <mark style="background: #014E11F2;">time complexity</mark> is exponential as we have two recursive calls each $\exists$ or $\forall$. i.e. $O(|\phi|^{q\cdot d(\phi)})$ where $q$ is the number of quantifiers, and $d(\phi)$ is the quantifier depth.
 
-```ad-note 
-what is the quantifier depth?
-The number of consecutive quantifiers
-$\exists p  \forall q \forall r$ would have the quantifier depth 3
-```
+> [!note]
+> what is the quantifier depth?
+> The number of consecutive quantifiers
+> $\exists p  \forall q \forall r$ would have the quantifier depth 3
 
 Complexity: __PSPACE__-complete 
 
@@ -55,10 +54,8 @@ Just has one path as there are only $\exists$ when looking at satisfiability
 Has multiple paths as there are $\exists$ as well as $\forall$ which split up the tree
 ![[Tree_satisfiability_QBF.png|300]]
 
-```ad-note
-title: [[lemma 5]]
-In [[QBF]] every formula is equivalent to one in [[Prenex Normal Form]] which can be computed efficiently
-```
+> [!note] [[lemma 5]]
+> In [[QBF]] every formula is equivalent to one in [[Prenex Normal Form]] which can be computed efficiently
 
 Example:
 Not in [[Prenex Normal Form]]:
@@ -71,14 +68,12 @@ $\exists p \phi_1 \land \phi_2$ is rewritten into $\exists q (\phi_1[p/q]) \land
 
 <mark style="background: #FF5582A6;">One has to take care!</mark> the condition is that p is not occuring free in $\phi_2$ otherwise we would change the meaning of the formula! Solution: one can rename the variable $p$ in $\exists p \phi_1$ to another name i.e. $u,l,k$ so that the variable does not occur freely in $\phi_2$.
 
-```ad-note 
-title: [[Lemma 6]]
-Model-checking [[QBF]]'s in [[Prenex Normal Form]] with n quantifiers ($\exists,\forall$) has the time complexity:
-
-$$\Sigma_n=NP^{coNP^{...}} \text{ or } \Pi_n=coNP^{NP^{...}}$$
-
-Application: the sequence of NP and co-NP depends on which quantors one uses: i.e. $\exists p \forall q \exists r \phi$ would have the complexity class $NP^{co-NP^{NP}}$
-```
+> [!note] [[Lemma 6]]
+> Model-checking [[QBF]]'s in [[Prenex Normal Form]] with n quantifiers ($\exists,\forall$) has the time complexity:
+> 
+> $\Sigma_n=NP^{coNP^{...}} \text{ or } \Pi_n=coNP^{NP^{...}}$
+> 
+> Application: the sequence of NP and co-NP depends on which quantors one uses: i.e. $\exists p \forall q \exists r \phi$ would have the complexity class $NP^{co-NP^{NP}}$
 
 What does $NP$ complexity mean:
 The problem can be solved with a machine in a $\textit{non deterministic}$ in polynomial time.  When something is in the power i.e. $NP^{coNP}$ it means that the main process has a subprocess that solves $coNP$ problems
@@ -333,10 +328,9 @@ $$\begin{equation}
 \end{equation}
 $$
 
-```ad-note 
-uniform continuous $\implies$ continuous
-Example: \frac{1}{x} is continuous but not uniformly continuous in $\mathbb{R}$
-```
+> [!note]
+> uniform continuous $\implies$ continuous
+> Example: \frac{1}{x} is continuous but not uniformly continuous in $\mathbb{R}$
 
 Here we got some exercises [[Exercises session 4]]
 

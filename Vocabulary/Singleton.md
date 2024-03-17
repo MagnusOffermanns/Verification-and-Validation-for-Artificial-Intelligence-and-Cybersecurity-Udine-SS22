@@ -1,0 +1,1 @@
+A set containing only one element. It has two subsets, itself and the empty set ($\emptyset$))

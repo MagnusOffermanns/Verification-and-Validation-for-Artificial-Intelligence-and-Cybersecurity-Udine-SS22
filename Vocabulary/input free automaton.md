@@ -1,0 +1,1 @@
+A [[input free automaton]] is an automaton without labels on the edges.

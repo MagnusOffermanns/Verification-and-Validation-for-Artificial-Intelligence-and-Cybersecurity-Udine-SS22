@@ -3,10 +3,8 @@ In the first part the second part of the proof of[[Theorem 4]]  is discussed to 
 ==Starting with 11 b==
 
 # 1 [[Theorem 5]]
-```ad-note
-title: Theorem 5 the [[Theorem 5|Closure Property]] 
-[[Regular Languages]] are closed under [[Boolean Operations]] ($\cup,\cap,\neg$), [[Concatenation]] and the [[Kleene-closure|Kleene star]]. Moreover the construction of the [[Deterministic Finite State Automata|Automaton]] that recognizes the language obtained from the application of the operation is [[effektive]].
-```
+> [!note] Theorem 5 the [[Theorem 5|Closure Property]]
+> [[Regular Languages]] are closed under [[Boolean Operations]] ($\cup,\cap,\neg$), [[Concatenation]] and the [[Kleene-closure|Kleene star]]. Moreover the construction of the [[Deterministic Finite State Automata|Automaton]] that recognizes the language obtained from the application of the operation is [[effektive]].
 
 What does it mean: If you have two regular language and you apply one of the operators the result is still a regular language.
 

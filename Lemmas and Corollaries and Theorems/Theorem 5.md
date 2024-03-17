@@ -5,3 +5,5 @@ aliases: Closure Property, Closure Properties
 
 What does it mean: If you have two regular language and you apply one of the operators the result is still a regular language.
 
+
+

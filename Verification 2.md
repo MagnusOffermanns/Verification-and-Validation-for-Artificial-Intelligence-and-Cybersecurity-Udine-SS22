@@ -68,7 +68,7 @@ If all <mark style="background: #014E11F2;">humans</mark> are <mark style="backg
 then <mark style="background: #ADCCFFA6;">Socrates</mark> is <mark style="background: #FF5582A6;">mortal</mark> .
 $((\forall x A(x)\rightarrow B(x)) \wedge A(y_0)) \rightarrow B(y_0)$
 
-The above formular is valid (i.e. true in every structure/interpretation). We call this a [[tautology]]
+The above formular is valid (i.e. true in every structure/interpretation). We call this a [[Tautology]]
 
 ---
 

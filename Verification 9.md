@@ -54,10 +54,9 @@ $$\phi_S^1=(\exists x \phi_{S[x=0]}^0) \land (\exists x \phi^0_{S[x=1]})... \lan
 When writing the statement out what does the [[Hintikka Formula]] mean?
 There is x labeled $a$ ($A(x)=true$), there is $x$ labeled by b ($B(x)=true$), and for every $x$, $x$ is either labeled by $a$ or by $b$ ($\forall x A(x) \lor B(x)$) 
 
-```ad-note 
-take $S' = (\{0,1\},<,\underbrace{A}_{\{1\}},\underbrace{B}_{\{0\}})$="ba". 
-This structure is actually different from the structure before but when the [[Hintikka Formula]]s of level one of $S$ and $S'$ are logically equivalent i.e. $\phi_S^1 \equiv \phi_{S'}^1$. Note: syntactically the formulas are not the same but they are still [[logical equivalence|logically equivalent]]
-```
+> [!note]
+> take $S' = (\{0,1\},<,\underbrace{A}_{\{1\}},\underbrace{B}_{\{0\}})$="ba". 
+> This structure is actually different from the structure before but when the [[Hintikka Formula]]s of level one of $S$ and $S'$ are logically equivalent i.e. $\phi_S^1 \equiv \phi_{S'}^1$. Note: syntactically the formulas are not the same but they are still [[logical equivalence|logically equivalent]]
 
 Now lets look at all [[Hintikka Formula]]s of string structures with 'a' and 'b'. i.e.
 
@@ -103,7 +102,7 @@ The higher the level is the more different strings can we distinguish in the [[H
 While on order 0 we could only we only had three classes $\{\epsilon,a,b\}$ at order one we could already distinguish more classes i.e. $\{	
 
 ==Lets Recall:==
-Property $P$ containing is not definable in [[FO]] if for all $n$ $\exists S,S'$ while $S,S'$ are [[n-equivalence|n-equivalent]] while $S \in P$ and $S \notin P$. [[Lemma 10]].
+Property $P$ containing is not definable in [[FO Resolution]] if for all $n$ $\exists S,S'$ while $S,S'$ are [[n-equivalence|n-equivalent]] while $S \in P$ and $S \notin P$. [[Lemma 10]].
 
 We can rewrite the property $S,S'$ are n-equivalent by saying their [[Hintikka Formula]] are [[logical equivalence|logically equivalent]] i.e $\phi_S^n \equiv \phi_{S'}^n$
 
@@ -169,15 +168,13 @@ A [[Language]] $L$ over A, is a subset of $A^* (L \leq A^*)$  i.e. a language is
 
 # Automata
 Automata stands for [[Deterministic Finite State Automata]]
-```ad-note
-title: Definintion: [[Deterministic Finite State Automata]]
-A [[DFA]] \mathcal{A} is a tuple $(Q,A,\delta,q_0,F)$ where
-- $Q$ is a finite set of states
-- $A$ is a finite set of Symbols i.e. [[Alphabet]]
-- $\delta$ is a [[Transition function]]  $\delta: Q \times A \rightarrow Q$
-- $q_0$ is the initial state and is $q_0 \in Q$ 
-- $F$ is a subset of $Q$ i.e $F \subseteq Q$ containing all final states
-```
+> [!note] Definintion: [[Deterministic Finite State Automata]]
+> A [[DFA]] \mathcal{A} is a tuple $(Q,A,\delta,q_0,F)$ where
+> - $Q$ is a finite set of states
+> - $A$ is a finite set of Symbols i.e. [[Alphabet]]
+> - $\delta$ is a [[Transition function]]  $\delta: Q \times A \rightarrow Q$
+> - $q_0$ is the initial state and is $q_0 \in Q$ 
+> - $F$ is a subset of $Q$ i.e $F \subseteq Q$ containing all final states
 
 ==1830==
 How do we paint a [[Deterministic Finite State Automata|Automata]]?

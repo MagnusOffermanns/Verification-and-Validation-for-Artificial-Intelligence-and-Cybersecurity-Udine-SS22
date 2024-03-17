@@ -1,0 +1,2 @@
+>[!note] [[Lemma 15]] 
+>Every $\omega\text{-language } L \subseteq A^\omega$ which is recognized by an [NBA](Buechi%20automata.md) can be expressed as a finite union of languages of the form $\overrightarrow{u} \cup \overline{\overrightarrow{v}}$ where $u,v, \subseteq A^*$ are regular languages.

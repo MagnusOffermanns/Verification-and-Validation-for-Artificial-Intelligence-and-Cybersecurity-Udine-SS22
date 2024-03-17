@@ -25,10 +25,9 @@ if $\phi_1$ is very complex and $\phi_2$ is super trivial. If it turns out that 
 
 equivalence reduces to [[validity satifiability]]
 
-```ad-note
-$\models$ is equivalent to $\Rightarrow$
-and means from that the Righthand side  is the logical consequence of the Lefthand side
-```
+> [!note]
+> $\models$ is equivalent to $\Rightarrow$
+> and means from that the Righthand side  is the logical consequence of the Lefthand side
 
 ## 1.1 [[definability between logics]]
 input:
@@ -140,7 +139,7 @@ $$\neg(\phi_1 \lor \phi_2)$$
  - $\neg(\phi_1 \lor \phi_2)$ becomes $(\neg\phi_1 \land \neg\phi_2)$
  -  $\neg(\phi_1 \land \phi_2)$ becomes $(\neg\phi_1 \lor \neg\phi_2)$
 
-see: [[Morgans Laws]]
+see: [[De Morgans Laws]]
 
 [[Lemma 3]]:
 Every formula is [[equi-sartisfiable]] to one in [[Conjunctive Normal Form]]. The [[Conjunctive Normal Form]] can be computed efficiently if there is no $\iff$
@@ -218,9 +217,8 @@ describes when $S \models \phi$ for $S: \sum \implies \{\text{True,False}\}$
 
 The $\forall$ and $\exists$ means that we fix one of the variables to either true or false and reevaluate it with this fixed value. If $S$ is valid for one of the set values one uses $\exists$ if the structure holds for all one uses $\forall$.
 
-```ad-note 
-$\exists p \phi$ is logically equivalente to $\neg \forall p \neg \phi$
-```
+> [!note]
+> $\exists p \phi$ is logically equivalente to $\neg \forall p \neg \phi$
 
 Example:
 $S \overset{?}{\models} \forall p \exists q (p \lor \neg q) \land (\neg p \lor q)$
@@ -238,11 +236,9 @@ $S_2''=[p=false,q=true]$ result with this input is not satisfied=>false
 
 That means that means that in case $S''$ there does not exist one $q$ that makes the equation valid that means the whole statement is wrong
 
-```ad-note 
-title: Bound and free variables
-- a variable p is considered <mark style="background: #014E11F2;">bound</mark> when it appears under a scope of a quantor i.e. $\exists p$ or $\forall p$
-- a variable is considered free when it is not in the a scope under quantor. i.e. in all other cases
-```
+> [!note] Bound and free variables
+> - a variable p is considered <mark style="background: #014E11F2;">bound</mark> when it appears under a scope of a quantor i.e. $\exists p$ or $\forall p$
+> - a variable is considered free when it is not in the a scope under quantor. i.e. in all other cases
 Example:
 the first occurence of $p$ is free. The third occurence of p ($\neg p$) is bound to the $\exists p$.
 $\phi = p ..... \exists p ....(\neg p)$

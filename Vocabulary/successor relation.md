@@ -1,0 +1,1 @@
+The successor relation is $x+1$

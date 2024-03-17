@@ -1,0 +1,2 @@
+> [!note] [[Corollary 3]]
+> To know wheater a language is non empty one can remove all states of an automaton $\mathcal{A}$ that are not reachable from the initial state $q_0$. Then one can check if a final state is remains. If there exists a final state the Language is non-empty.

@@ -8,11 +8,9 @@ On [[isomorphic|non-isomorpic]] finite structures, Spoiler wins  the Ehrenfeucht
 ==Why? ==
 Due to the __finite__ amount of elements in the structure at some point all elements of one of the two structures will be selected. Then, due to its [[isomorphic|non-isomorphic]] nature a ==element that is not present in one of the two structures will be chosen==.  In that moment the <mark style="background: #FF5582A6;">Spoiler</mark> wins as the <mark style="background: #014E11F2;">Duplicator</mark> can not chose the element as it is not present.
 
-```ad-note
-title: A measure of similarity [[remoteness]]
-How long the duplicator survies in the game is a measure of how simmilar two structures are. The longer he survives the more simmilar the structures are.
-
-```
+> [!note] A measure of similarity [[remoteness]]
+> How long the duplicator survies in the game is a measure of how simmilar two structures are. The longer he survives the more simmilar the structures are.
+> 
 
 But there are quicker ways of wining for the spoiler. For instance by the tactic divide and conquer:
 
@@ -65,18 +63,14 @@ Question: Why can the Spoiler not just choose a element twice. Like the second c
 
 # 1 The Fraisse Ehrenfeucht theorem [[Theorem 1]]
 We introduce [[Theorem 1]].
-```ad-note
-title: Theorem 1
-$S$ and $S'$ are [[n-equivalence|n-equivalent]] $\iff$ the Duplicator survives n-rounds in the [[Ehrenfeucht-Fraise game]] $G_{S,S'}$
-
-```
+> [!note] Theorem 1
+> $S$ and $S'$ are [[n-equivalence|n-equivalent]] $\iff$ the Duplicator survives n-rounds in the [[Ehrenfeucht-Fraise game]] $G_{S,S'}$
+> 
 
 Lets remember [[Lemma 10]]:
-```ad-note
-title: Lemma 10
-If there are two structure $S,S'$ such that:
-$S \in P$ and $S\notin P$ and $S$ and $S'$ are [[n-equivalence|n-equivalent]] then $\text{\textcolor{red}{P is not definable in First order logic}}$
-```
+> [!note] Lemma 10
+> If there are two structure $S,S'$ such that:
+> $S \in P$ and $S\notin P$ and $S$ and $S'$ are [[n-equivalence|n-equivalent]] then $\text{\textcolor{red}{P is not definable in First order logic}}$
 
 When we combine [[Theorem 1]] and [[Lemma 10]] we can substitute the "''are [[n-equivalence|n-equivalent]]" by "n-rounds in the [[Ehrenfeucht-Fraise game]] $G_{S,S'}$". By this we can prove even better if a Property is definable in [[FO - First order logic|FO]]
 
@@ -116,7 +110,7 @@ The Spoiler will engage again into the tactic of divide and conquer cutting the 
 
 This means that the property of __connectedness__ i.e. P={Connected Graphs} is not definable in [[FO - First order logic|FO]].
 
-We anticipated this already in the previous classes as to define [[connectedness]] [[FO]] would need some kind of principle of induction
+We anticipated this already in the previous classes as to define [[Connectedness]] [[FO Resolution]] would need some kind of principle of induction
 
 
  This can be proven by a connection of [[Lemma 10]] and [[Theorem 1]].
@@ -147,14 +141,12 @@ Question:
 > why does the Spoiler not do Divide and conquer?
 > why is the game not always over after 3 rounds as the Spoiler chooses how far the second chosen node is away from the first chosen node?
 
-```ad-note 
-title: rule of Thumb: how should the duplicator respond?
-If the Spoiler plays "close" to the previouse pebbles the Duplicator should respond __isomorpically__ (on the same node in the other structure) within the corresponding neighbourhoods.Otherwise the Duplicator will play "far" but has therefore freedom of choice.
-```
+> [!note] rule of Thumb: how should the duplicator respond?
+> If the Spoiler plays "close" to the previouse pebbles the Duplicator should respond __isomorpically__ (on the same node in the other structure) within the corresponding neighbourhoods.Otherwise the Duplicator will play "far" but has therefore freedom of choice.
 
 
-Other examples of properties not definable in [[FO]] are:
-1. [[connectedness]]
+Other examples of properties not definable in [[FO Resolution]] are:
+1. [[Connectedness]]
 2. [[finiteness]]
 3. [[parity]] (even/odd)
 4. [[2-colorability]]
@@ -257,21 +249,17 @@ To figure out how we have to react in the evaluation game we use the [[Ehrenfeuc
 
 ![[Selection_157.png|500]]
 
-```ad-note 
-title: How many rounds can we use the [[Ehrenfeucht-Fraise game|EF-game]] to help us bind the elements in the [[The evaluation game|evaluation game]]?
-As we know that the duplicator can only survive n rounds we can use the [[Ehrenfeucht-Fraise game|EF-game]] only for n nested quantifications.
-
-This is where the precondition comes from that our formula has at most [[Quantifier rank]] n.
-```
+> [!note] How many rounds can we use the [[Ehrenfeucht-Fraise game|EF-game]] to help us bind the elements in the [[The evaluation game|evaluation game]]?
+> As we know that the duplicator can only survive n rounds we can use the [[Ehrenfeucht-Fraise game|EF-game]] only for n nested quantifications.
+> 
+> This is where the precondition comes from that our formula has at most [[Quantifier rank]] n.
 
 ==With this first part of the prove we only showed one direction of the $\iff$. (i.e. n-equivalent $\to$ Duplicator survives n rounds) Now we have to show the other direction==
 
 ## 2.6 part of proof from n-equivalence $\to$ Duplicator survives n rounds.
 
-```ad-note
-title: What do we have to prove?
-Supposing $S,S'$ are [[n-equivalence|n-equivalent]] (for every formular $\phi$ with [[Quantifier rank]] n the following must be true: $S\models \phi \iff S' \models \phi$) we have to find a strategy for the Duplicator in th [[Ehrenfeucht-Fraise game]] to survive n rounds.
-```
+> [!note] What do we have to prove?
+> Supposing $S,S'$ are [[n-equivalence|n-equivalent]] (for every formular $\phi$ with [[Quantifier rank]] n the following must be true: $S\models \phi \iff S' \models \phi$) we have to find a strategy for the Duplicator in th [[Ehrenfeucht-Fraise game]] to survive n rounds.
 
 What is one problem that we face? We have a $\forall$ in the definition of the [[n-equivalence]]. S and S' must model every formula $\phi$ with quantifier rank smaller or equal $n$.
 
@@ -286,7 +274,7 @@ The [[Hintikka Formula]] $\phi_S^n$ is defined by the [[Quantifier rank]] n as w
 Intuitive definition: 
 The strongest formula with [[Quantifier rank]] n that holds on the structure $S$ (i.e. $S \models \phi$ ).
 
-Definition over [[FO]]
+Definition over [[FO Resolution]]
 The [[FO - First order logic|First order logic]] of $S$ relativised to [[Quantifier rank]] n.
 
 with other words:  The first order logic of S is all formulas $\phi$ that mode $S$. With relativised we mean that we only take the formulas that have a [[Quantifier rank]] smaller or equal $n$.
@@ -370,7 +358,7 @@ Here with [[Synthesis]] it gets a bit more complicated. We do not have full cont
 
 The question is now can we reach our configuration independently of how the environment influences the bits that we do not have control over?
 
-![[Selection_160.png]] 
+![[Attachments/Selection_160.png]] 
 
 
 A tiny bit more formally:

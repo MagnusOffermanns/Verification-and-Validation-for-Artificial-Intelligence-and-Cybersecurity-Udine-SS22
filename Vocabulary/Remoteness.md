@@ -1,0 +1,1 @@
+How different are two structures? How long does the  need till he finds a difference.

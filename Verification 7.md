@@ -173,21 +173,19 @@ Sometimes the question is if a certain property $P$ (often expressed in natural 
 Example:
 We have a [[Definability]] problem and we express a property in [[Monadic second order logic]], a more complex logic than [[FO - First order logic|FO]]. Now we want to know can we also express this property in [[FO - First order logic]]?
 
-```ad-note
-title: Notation:
-$$P: \text{ property (i.e. a set of structures)}$$
-$$S: Structure$$
-$$\phi: \text{FO formula}$$
- ```
- 
-1. $P$ __is [[Definability|defined by]]__ $\phi$ if for every $S$ $S \in P \iff S \models \phi$
-
-### 2.2.2 [[elementary equivalence]] 
-1. $S,S'$ [[elementary equivalence|elementary equivalent]] if for every $\phi$:  $S\models \phi \iff S'\models \phi$
-
-[[elementary equivalence]] is probably called [[elementary equivalence]] because [[FO - First order logic]] was previously called elementary logic.
-
-```ad-note
+> [!note] Notation:
+> $P: \text{ property (i.e. a set of structures)}$
+> $S: Structure$
+> $\phi: \text{FO formula}$
+>  ```
+>  
+> 1. $P$ __is [[Definability|defined by]]__ $\phi$ if for every $S$ $S \in P \iff S \models \phi$
+> 
+> ### 2.2.2 [[elementary equivalence]] 
+> 1. $S,S'$ [[elementary equivalence|elementary equivalent]] if for every $\phi$:  $S\models \phi \iff S'\models \phi$
+> 
+> [[elementary equivalence]] is probably called [[elementary equivalence]] because [[FO - First order logic]] was previously called elementary logic.
+> ad-note
 title: [[Lemma 9]]
 If there are two structure $S,S'$ such that:
 $S \in P$ and $S\notin P$ and $S$ and $S'$ are [[elementary equivalence|elementary equivalent]] then $\text{\textcolor{red}{P is not definable in First order logic}}$
@@ -212,9 +210,8 @@ But by definition  $S'$ is not part of $P$ i.e. $S' \notin P$ that means this st
 If we want to prove that a property is not definable than we find two structures S and S' that are elementary equivalent and one fulfills the property and one not. Then we can point at [[Lemma 9]] and have proven that the property is not definable in [[FO - First order logic]].
 
 ### 2.2.3 [[Quantifier rank]]
-```ad-note 
-$\phi$ has [[Quantifier rank]] n if it has at most n nested quantifiers
-```
+> [!note]
+> $\phi$ has [[Quantifier rank]] n if it has at most n nested quantifiers
 
 The number of Quantifiers is  normally  much smaller than the  [[Quantifier rank]].
 
@@ -232,17 +229,14 @@ One could resolve the formula to the following making the rank clearer:
 $$\phi = (\forall x \forall y \quad \neg R(x,y) \lor (\forall x \forall y\exists z \quad R(x,z))\lor(\forall x \forall y\exists t \quad R(t,y)))$$
 
 ### 2.2.4 [[n-equivalence]]
-```ad-note 
-$S,S'$ are n-equivalent if for every $\phi$ with [[Quantifier rank]] n the following holds true: $S \models \phi \iff S' \models \phi$
-```
+> [!note]
+> $S,S'$ are n-equivalent if for every $\phi$ with [[Quantifier rank]] n the following holds true: $S \models \phi \iff S' \models \phi$
 
 [[elementary equivalence]] is more strict as [[n-equivalence]].
 
-```ad-note
-title: [[Lemma 10]]
-If there are two structure $S,S'$ such that:
-$S \in P$ and $S\notin P$ and $S$ and $S'$ are [[n-equivalence|n-equivalent]] then $\text{\textcolor{red}{P is not definable in First order logic}}$
-```
+> [!note] [[Lemma 10]]
+> If there are two structure $S,S'$ such that:
+> $S \in P$ and $S\notin P$ and $S$ and $S'$ are [[n-equivalence|n-equivalent]] then $\text{\textcolor{red}{P is not definable in First order logic}}$
 
 ==NEW GOAL:==
 We want to construct a game $G_{S,S'}$ whose winner determines weather S and S' are [[n-equivalence|n-equivalent]]. 
@@ -351,8 +345,6 @@ On [[isomorphic|non-isomorpic]] finite structures, Spoiler wins  the Ehrenfeucht
 ==Why? ==
 Due to the __finite__ amount of elements in the structure at some point all elements of one of the two structures will be selected. Then, due to its [[isomorphic|non-isomorphic]] nature a ==element that is not present in one of the two structures will be chosen==.  In that moment the <mark style="background: #FF5582A6;">Spoiler</mark> wins as the <mark style="background: #014E11F2;">Duplicator</mark> can not chose the element as it is not present.
 
-```ad-note
-title: A measure of similarity [[remoteness]]
-How long the duplicator survies in the game is a measure of how simmilar two structures are. The longer he survives the more simmilar the structures are.
-
-```
+> [!note] A measure of similarity [[remoteness]]
+> How long the duplicator survies in the game is a measure of how simmilar two structures are. The longer he survives the more simmilar the structures are.
+> 

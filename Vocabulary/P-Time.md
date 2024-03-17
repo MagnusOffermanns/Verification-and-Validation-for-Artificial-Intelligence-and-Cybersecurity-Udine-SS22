@@ -1,0 +1,5 @@
+---
+aliases: polynomial time,P, D-Time
+---
+
+In [computational complexity theory](https://en.wikipedia.org/wiki/Computational_complexity_theory "Computational complexity theory"), **P**, also known as **PTIME** or **[DTIME](https://en.wikipedia.org/wiki/DTIME "DTIME")**(_n_O(1)), is a fundamental [complexity class](https://en.wikipedia.org/wiki/Complexity_class "Complexity class"). It contains all [decision problems](https://en.wikipedia.org/wiki/Decision_problem "Decision problem") that can be solved by a [deterministic Turing machine](https://en.wikipedia.org/wiki/Deterministic_Turing_machine "Deterministic Turing machine") using a [polynomial](https://en.wikipedia.org/wiki/Polynomial "Polynomial") amount of [computation time](https://en.wikipedia.org/wiki/Computation_time "Computation time"), or [polynomial time](https://en.wikipedia.org/wiki/Polynomial_time).

@@ -1,0 +1,1 @@
+Is a variable which is not in the scope of a quantifier ($\forall, \exists$)

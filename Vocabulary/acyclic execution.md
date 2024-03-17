@@ -1,0 +1,1 @@
+We say that $K$ is an [[acyclic execution]] structure if all its execution paths are finite.

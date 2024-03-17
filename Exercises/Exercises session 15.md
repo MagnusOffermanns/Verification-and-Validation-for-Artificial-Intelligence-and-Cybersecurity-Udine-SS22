@@ -1,0 +1,1 @@
+There are exercises in the book of Manner and Pnueli -> chapter 0 of book 2.

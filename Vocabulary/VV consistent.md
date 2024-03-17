@@ -1,0 +1,1 @@
+ [consistent](VV%20consistent.md): Atom $A$ is [consistent](VV%20consistent.md) with state $s$ if $s \models state(A)$, that is, all state-formulas in $A$ are [satisfiable](Satisfiability.md) by $s$.

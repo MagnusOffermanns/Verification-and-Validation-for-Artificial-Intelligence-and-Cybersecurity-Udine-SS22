@@ -1,0 +1,2 @@
+**Proposition 1**:
+Any formula $\phi(x)$ of quantifier depth n is equivalent to a finite disjunction of formulas $\phi_{\underline{W}}$ (those formulas $\phi_{\underline{W}}$ such that $\underline{W}$ contains some $(u,r)$ satisfying $\phi(x)$)

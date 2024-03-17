@@ -1,1 +1,1 @@
-For all [[NFA with epsilon-move]] $\mathcal{A}$ there exists a [[NFA]] without $\epsilon$-move $\mathcal{A}'$ such that the languages L are accepted by both [[Deterministic Finite State Automata|Automaton]] i.e. $L(\mathcal{A})=L(\mathcal{A}'')$ and vice versa.
+For all [[NFA with epsilon-move]] $\mathcal{A}$ there exists a [[NFA]] without $\epsilon$-move $\mathcal{A}'$ such that the languages L are accepted by both [[Deterministic Finite State Automata|Automaton]] i.e. $L(\mathcal{A})=L(\mathcal{A}')$ and vice versa.

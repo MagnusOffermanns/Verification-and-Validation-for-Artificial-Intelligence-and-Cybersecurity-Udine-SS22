@@ -58,10 +58,8 @@ This has the advantage that we can switch between the two classes.
 
 For example when we have a [[Deterministic Finite State Automata|Automaton]] which accepts the language $L$ and we want to find a [[Deterministic Finite State Automata|Automaton]] that accepts the complemetary language. 
 
-```ad-note
-title: what is the [[Complement of a Language]]?
-If we have a language $L \subseteq A^*$ then the [[Complement of a Language]] $\overline{L}$ consists of all all the words of the that are not part of $L$ i.e. $\overline{L}=A^*-L$
-```
+> [!note] what is the [[Complement of a Language]]?
+> If we have a language $L \subseteq A^*$ then the [[Complement of a Language]] $\overline{L}$ consists of all all the words of the that are not part of $L$ i.e. $\overline{L}=A^*-L$
 
 This is important because it heavily used in model checking.
 
@@ -72,30 +70,26 @@ It is easy to find the [[Complement of a Language]]  by exploiting [[Determinism
 
 # [[Non Deterministic Finite State Atomata|NFA]] with $\epsilon$-moves
 It is very similar to the normal [[Non Deterministic Finite State Atomata|NFA]] but has $\epsilon$-moves
-```ad-note
-title: Definition: [[NFA with epsilon-move]]
-We have an [[Deterministic Finite State Automata|Automaton]] $(Q,A,\Delta,q_0,F)$ where $Q,A,q_0$ and $F$ have definitions equla to the normal [[Non Deterministic Finite State Atomata|NFA]]. 
-The only difference is $\Delta$
-$\Delta: Q \times (A \cup\{\epsilon\}) \rightarrow 2^Q$
-
-This means that independent of the state one is in it is always possible to read the empty word $\epsilon$ as input. This is simmilar to a idle move.
-
-How do we define $\hat{\Delta}$ the transition function accepting words?
-
-$\hat{\Delta}(q,\epsilon)=\epsilon\text{-closure}(q)$
-
-```
+> [!note] Definition: [[NFA with epsilon-move]]
+> We have an [[Deterministic Finite State Automata|Automaton]] $(Q,A,\Delta,q_0,F)$ where $Q,A,q_0$ and $F$ have definitions equla to the normal [[Non Deterministic Finite State Atomata|NFA]]. 
+> The only difference is $\Delta$
+> $\Delta: Q \times (A \cup\{\epsilon\}) \rightarrow 2^Q$
+> 
+> This means that independent of the state one is in it is always possible to read the empty word $\epsilon$ as input. This is simmilar to a idle move.
+> 
+> How do we define $\hat{\Delta}$ the transition function accepting words?
+> 
+> $\hat{\Delta}(q,\epsilon)=\epsilon\text{-closure}(q)$
+> 
 
 
 Now lets consider:
 $q \in Q$ and $p \in 2^Q$
 An $\epsilon$-move is a transition of the form $\Delta(q,\epsilon)$. 
 What is an [[epsilon-closure]]:
-```ad-note
-title: [[epsilon-closure]]
-Is the set of states that you can reach within a [[NFA with epsilon-move]] from a state $q$ by repeatedly applying only the empty word $\epsilon$.
-This set of states is denoted as $\epsilon$-closure(q)
-```
+> [!note] [[epsilon-closure]]
+> Is the set of states that you can reach within a [[NFA with epsilon-move]] from a state $q$ by repeatedly applying only the empty word $\epsilon$.
+> This set of states is denoted as $\epsilon$-closure(q)
 
 ==important:== [[Non Deterministic Finite State Atomata|NFA]]s are not a special case of [[NFA with epsilon-move]] without the epsilon move. It $\epsilon$-moves do not increase [[expressiveness]].
 
@@ -130,10 +124,8 @@ $\epsilon\text{-closure}(p_2)\cup\epsilon\text{-closure}(p_3)\cup\epsilon\text{-
 $\underbrace{\epsilon\text{-closure}(p_2)}_{x}\cup \underbrace{\epsilon\text{-closure}(p_3)}_{y \& z \& z}\cup \underbrace{\epsilon\text{-closure}(p_4)}_{y}\cup\underbrace{\epsilon\text{-closure}(p_5)}_{z}$
 
 # [[Theorem 3]]
-```ad-note 
-title: [[Theorem 3]]
-For all [[NFA with epsilon-move]] $\mathcal{A}$ there exists a [[NFA]] without $\epsilon$-move $\mathcal{A}'$ such that the languages L are accepted by both [[Deterministic Finite State Automata|Automaton]] i.e. $L(\mathcal{A})=L(\mathcal{A}'')$ and vice versa.
-```
+> [!note] [[Theorem 3]]
+> For all [[NFA with epsilon-move]] $\mathcal{A}$ there exists a [[NFA]] without $\epsilon$-move $\mathcal{A}'$ such that the languages L are accepted by both [[Deterministic Finite State Automata|Automaton]] i.e. $L(\mathcal{A})=L(\mathcal{A}'')$ and vice versa.
 
 To summarize:
 ==[[Deterministic Finite State Automata|DFA]]$\equiv$[[Non Deterministic Finite State Atomata|NFA]]$\equiv$[[NFA with epsilon-move]]==
@@ -170,10 +162,8 @@ Like [[General Regular Expressions]] without the [[Kleene-closure|Kleene star]]:
 break
 ---
 # [[Theorem 4]]
-```ad-note 
-title: [[Theorem 4]]
-For every [[Finite State Automata]], there exists a [[Restricted Regular Expression]] that defines the same language and vice versa.
-```
+> [!note] [[Theorem 4]]
+> For every [[Finite State Automata]], there exists a [[Restricted Regular Expression]] that defines the same language and vice versa.
 ---
 ==Proof:==
 ## First direction [[Finite State Automata|FA]] $\rightarrow$ [[Restricted Regular Expression]] 
