@@ -79,7 +79,7 @@ Only $A_7$ contains $\varphi$ making it the only reasonable initial state.
 
 Now we have to proof that if there is a fullfilling then there exists a corresponding model.
 >[!Note] Proposition
->If $\pi=A_0,A_1,\dots$ is a fullfilling path in the [Tableaux](Tableaux.md) $T)\varphi$ then there exists a model $\sigma$ inducing $\pi$, that is $\pi=\pi_\sigma$ and for every $\psi \in \phi_\varphi$ (formula in the closure) and every $j \ge 0, (\sigma,j) \Vdash \phi$ if and only if ($\iff$ ) $\phi \in A_j$ 
+>If $\pi=A_0,A_1,\dots$ is a fullfilling path in the [Tableaux](Tableaux.md) $T) \varphi$ then there exists a model $\sigma$ inducing $\pi$, that is $\pi=\pi_\sigma$ and for every $\psi \in \phi_\varphi$ (formula in the closure) and every $j \ge 0, (\sigma,j) \Vdash \phi$ if and only if ($\iff$ ) $\phi \in A_j$ 
 
 ![](Verification%2032_image_10.png)
 

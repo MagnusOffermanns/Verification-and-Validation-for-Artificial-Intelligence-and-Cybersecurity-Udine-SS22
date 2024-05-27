@@ -4,6 +4,7 @@ We continue with the proof of [[Theorem 6|Myhill-Nerode Theorem]] which was star
 We assume $\approx_L$ has [[finite index]]
 ==lets recall:==
   $$u \approx_L v \quad \iff  \quad \forall t \in A^\star \hspace{0.5em} ( u \cdot t \in L \iff v \cdot t \in L)$$
+
 ==Goal:==
 Contruct a [[Deterministic Finite State Automata|DFA]] $\mathcal{A}$ that recognizes $L$ i.e. $\mathcal{L}(\mathcal{A})=L$
 
@@ -48,8 +49,9 @@ So what is the definition of $\approx_L$ it means that $\forall t: u \cdot t \ap
 Now the last step is to show that $\mathcal{A}$ recognizes the language $L$
 
 #### 0.1.1.2 Accepts $[u]_{\approx_L}$ the language $L$?
+
 ==Note the invariant:==  $\forall w \in \mathcal{A}^\star$ 
-If we leave from the initial state $q0$ we are in equivalence class $[\epsilon]_{\approx_L}$ . When we input $w$ we return in the state $qw$ which has the equivalence class $[w]_{\approx_L}$.  A schematic can be seen in the diagram below:
+If we leave from the initial state $q_0$ we are in equivalence class $[\epsilon]_{\approx_L}$ . When we input $w$ we return in the state $q_w$ which has the equivalence class $[w]_{\approx_L}$.  A schematic can be seen in the diagram below:
 $\mathcal{A}:$
  ```mermaid
 graph LR
@@ -89,7 +91,7 @@ The data: for [[Neural network]]s the input is very often a fixed sized tuple of
 ## 1.1 Active learning vs Passive learning
 
 The teacher only provides labels and data. But it does not interact with the neural network.
-![[Passive learning.png|300]]
+![[Verification 13_image_1.png|300]]
 
 There is a back and forth. The learner asks the teacher and the teacher then responds.
 
@@ -98,7 +100,7 @@ An example: The learner creates a image of a dog. The teacher than says if this 
 Sometimes the active scenario is not ==practial==.
 Tends to be more efficient.
 
-![[Active learning.png|300]]
+![[Verification 13_image_2.png|300]]
 
 
 ## 1.2 bit of history
@@ -120,7 +122,7 @@ pause
 The ==teacher== has a secret regular language $L_0$, for instace represented by a [[Deterministic Finite State Automata|DFA]] $A_0$.
 The learner initialy only knows the undelying alphabet $\Sigma$
 
-Note: Why DFA? Comparing of languages only takes [[P-Time]]
+Note: Why [DFA](Deterministic%20Finite%20State%20Automata.md)? Comparing of languages only takes [[P-Time]]
 
 ==Step 2==
 __Learner__ can choose between two queries while estimating its [[Deterministic Finite State Automata|DFA]] $A$, $A_0$ is the [[Deterministic Finite State Automata|DFA]] the teacher has that describes the language $L_0$:
@@ -132,7 +134,7 @@ This is a cooperative game: The teacher is not the opponent of the learner.
 ==step 3==
 The teacher answers accordingly
 1. yes if $w \in L_0$ no if otherwise
-2. Yes if $L(A) = L_0$ i.e. the __Learner__ wins and the game ends. Otherwise the teacher will return the shortes possible counterexample: He choses a word $w$ so that $w \in (L_0-L(A)) \cup (L_(A)-L_0)$ this is the [[symmetric difference]] of the Languages. This are all the words that either do belong to $L_0$ but not to $L(A)$ i.e. ($(L_0-L(A))$) or they belong to $L(A)$ but not to $L_0$ i.e.  ($L(A)-L_0$).
+2. Yes if $L(A) = L_0$ i.e. the __Learner__ wins and the game ends. Otherwise the teacher will return the shortes possible counterexample: He choses a word $w$ so that $w \in (L_0-L(A)) \cup (L(A)-L_0)$ this is the [[symmetric difference]] of the Languages. This are all the words that either do belong to $L_0$ but not to $L(A)$ i.e. ($(L_0-L(A))$) or they belong to $L(A)$ but not to $L_0$ i.e.  ($L(A)-L_0$).
 
 The fact that the teacher chooses the shortest counterexample has an influence on the complexity of the problem.
 
@@ -175,45 +177,45 @@ In practice this methods are used in ==protocoll state fuzzing==
 ## 2.2 Applications of the [[Theorem 6|Myhill-Nerode Theorem]] during 
 If there is a regular language you can create it by a union of equivalence classes. Each puzzle is one equivalence class. Each [[Equivalence problem|equivalence class]] contains words. 
 
-![[Myhill nerode equivalence.png|600]]
+![[Verification 13_image_3.png|600]]
 
-![[equivalence classes puzzle.png|600]]
+![[Verification 13_image_4.png|600]]
 
 
 We will introduce a new equivalence: We do not test the [[Theorem 6|Myhill-Nerode equivalence]] for all words but only for a set of words $T$. With this we might not get the entire truth but we learn more and more about the Language $L_0$.
 
-![[Reduction to smaller relativization set.png]]
+![[Verification 13_image_5.png]]
 
 Of course as $T$ is a subset of $\Sigma^\star$ i.e. the relation relativizes the entire [[Theorem 6|Myhill-Nerode equivalence]].
 
-If $T$ is empty we define the most broad equivalence because we do not need to check for any words of T and it always returns true i.e. all words are equivalent and we only have one [[Equivalence problem|equivalence class]].
+If $T$ is empty we define the most broad equivalence because we do not need to check for any words of $T$ and it always returns true i.e. all words are equivalent and we only have one [[Equivalence problem|equivalence class]].
 
 If we define $T$ as the empty word i.e. $\{\epsilon\}$ it results that two words are only equivalent if they are the same with a traditional equivalence i.e. $u=v$. Because we need to check the two words without adding a symbol.
 
 What does this mean. That we have a control knob how accurate we want to estimate the Language $L_0$.
-![[Selection_025.png]]
+![[Verification 13_image_6.png]]
 If we leave $T$ empty we have almost no info. If we choose T to be the empty word we need to test a lot. So between this two extremes we can define our T to fit to our needs.
 
 Myhill rode is a very fine equivalence. The blue and grey puzzle pieces.
 The relativeized equivalences are more coarse. The red borders over the puzzle pieces in the image below.
-![[Relativized equivalences image.png|600]]
+![[Verification 13_image_7.png|600]]
 
 
 
 ==Definitions==
-A learner constructs automata from paris $(S,T)$. $S \subseteq \Sigma^\star$ and [[T-Minimal]] and [[T-complete]]
+A learner constructs automata from pairs $(S,T)$. $S \subseteq \Sigma^\star$ and [[T-Minimal]] and [[T-complete]]
 
 
 [[T-Minimal]]
 A set $S$ is minimal that whenever I choose two elements $s$ and $s'$ of $S$  they are never in the same equivalence class. You do not need an element for every class that exists i.e.
 
-![[T_minimal.png|300 ]]
+![[Verification 13_image_8.png|300 ]]
 
 [[T-complete]]
 [[T-complete]] means that for every word $a$ that we concatenate to the right of a word $s$ of $S$. There exists at least one element $s'$ out of $S$ that is equivalent to $sa$ in the T-equivalence $\approx_{L_{0}T}$.
 
 
-![[T-complete_2.png|700]]
+![[Verification 13_image_9.png|700]]
 
 
 I the end we will define the transitions as the arrows and the red dots as the states resulting in a learned automaton that accepts the language $L_0$.

@@ -4,4 +4,4 @@
 
 proof of congruence and finite index:
 
-![[VV22exercise_1.jpeg]]
+![[Verification 22_image_7.jpeg]]

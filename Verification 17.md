@@ -14,7 +14,7 @@ $$l_y \sim _L l_x$$
 
 This means that $l_y$ an $l_x$ are associated with the same program counter position.
 
-![[equivalent control pointer positions.png]]
+![[Verification 17_image_1.png]]
 
 As a description from above
 1. case $l \sim l_1$ and only to $l_1$ -> this is a concatination
@@ -22,9 +22,9 @@ As a description from above
 3. $l \sim l_1$ and only to $l_1$ -> this is a assignment -> local declaration does not 
 
 How does this look for our example of the GCD:
-![[GCD in SPL.png]]
+![[Verification 17_image_2.png]]
 
-![[control locations for the GCD.png]]
+![[Verification 17_image_3.png]]
 
 How does the $[l_2]$ class work out?
 1. we have $l_2$ is infront of a conditonal (case 2)
@@ -34,7 +34,7 @@ How does the $[l_2]$ class work out?
 Is an instruction executed, a new location is reached. This location is called [[Post-location]].
 
 Example:
-![[post location instruction.png]]
+![[Verification 17_image_4.png]]
 
 The [[Post-location]] of this instruction $S$ is the location of the last command that is executed i.e. $S_k$.
 
@@ -43,30 +43,30 @@ for all other commands i.e. $l_i...l_{k-1}$ the [[Post-location]] is simply $l_{
 
 Other examples:
 
-![[other post location examples.png]]
+![[Verification 17_image_5.png]]
 
 How does it look with our GCD example?
 
-![[Post location GCD.png]]
+![[Verification 17_image_6.png]]
 
 ## 1.2 The [[Ancestor relation]]
 
 If $S'$ is a sub instruction of S, S is called the __ancestor__ of $S'$
 
-![[The ancestor relation.png]]
+![[Verification 17_image_7.png]]
 
 Example for [[Ancestor relation|LCA]]:
 
-![[Largest common ancestor example.png]]
+![[Verification 17_image_8.png]]
 
 ==What does this mean==: Looking at the [[Ancestor relation|LCA]] we can see if the instructions can be executed in parallel or need to be executed one after another.
 
 When can we execute two instructions in parallel?
 > [!note] parallel instructions
-> If $s_i$ and $s_j$ have a cooperation instruction ($||$) S, where $S_i \neq S_j$ and $S_j \neq S$ and $S_i \neq S$ then they are __parallel instructions__ and we can execute them in parallel. Otherwise we call them __instructions in conflict__
+> If $S_i$ and $S_j$ have a cooperation instruction ($||$) S, where $S_i \neq S_j$ and $S_j \neq S$ and $S_i \neq S$ then they are __parallel instructions__ and we can execute them in parallel. Otherwise we call them __instructions in conflict__
 
 Example:
-![[Parallel instructions example.png]]
+![[Verification 17_image_9.png]]
 
 ## 1.3 Semantics of [[Simple Programming Language|SPL]] programms
 
@@ -107,7 +107,7 @@ The conditions are:
 - $y_2=b$
 - $\pi={[l_1]}$
 
-![[Initial condition example.png]]
+![[Verification 17_image_10.png]]
   
 
 ## 1.6 The set of transistions $\mathcal{T}$ 
@@ -115,7 +115,7 @@ The conditions are:
 2. All transitions are [[self-disabling]] meaning that at least the control variable is changed.
 
 Abbreviations:
-![[Abbreviations transitions.png]]
+![[Verification 17_image_11.png]]
 
 ==$pres$ stands for preserve==
 
@@ -133,22 +133,23 @@ explenation: when c is true the entire statement gets true and executed. if c is
 $\rho_l: move(l,\hat{l}) \land \alpha' = \alpha \cdot e \land pres(Y-\{\alpha\})$ 	 
  - $\cdot$ is the concationation operation
 
-#### 1.6.1.5 Asynchronous receive: $I: \alpha \leftarrow e; \hat{l}:$	$\rho_l: move(l,\hat{l}) \land |\alpha|>0  \land \alpha = \alpha' \cdot u' \land pres(Y-\{u,\alpha\})$	 
+#### 1.6.1.5 Asynchronous receive: $I: \alpha \leftarrow e; \hat{l}:$	
+$\rho_l: move(l,\hat{l}) \land |\alpha|>0  \land \alpha = \alpha' \cdot u' \land pres(Y-\{u,\alpha\})$	 
 The transition is only enabled if the channel is not empty	
 
 $\alpha =u' \cdot \alpha'$ is a fancy way of saying we remove an element from $\alpha$. It means the old $\alpha$ value is the new $\alpha$ value concatenated with $u'$ meaning that  $\alpha'$ is $u'$ less than the original $\alpha$.
 
 #### 1.6.1.6 Synchronous send/receive:
 
-![[SPL to TLS synchronous request and release.png]]
+![[Verification 17_image_12.png]]
 
-  explenation: we move the control in the two processes from l to $l'$ and from $m$ to $m'$ simultaneously. The control needs to be at $l$ and $m$ simultaneously otherwise the command is not enabled .
+  explanation: we move the control in the two processes from l to $l'$ and from $m$ to $m'$ simultaneously. The control needs to be at $l$ and $m$ simultaneously otherwise the command is not enabled .
   We move the value from the variable $e$ to $u$.
 #### 1.6.1.7 Request
-![[Reqest SPL to TLS.png]]
+![[Verification 17_image_13.png]]
 
 #### 1.6.1.8 Release
-![[Receive SPL to TLS.png]]
+![[Verification 17_image_14.png]]
 
 #### 1.6.1.9 $I: noncritial; \hat{I}$
 - $\rho_l:move(l,\hat{l}) \land pres(Y)$
@@ -160,22 +161,22 @@ $critical$ has [[Justice]]
 $noncritical$ does not need [[Justice]] nor [[Compassion]]
 
 #### 1.6.1.11 Produce
-![[SPL to TLS produce.png]]
+![[Verification 17_image_15.png]]
 
 #### 1.6.1.12 Consume
-![[SPL to PLS consume.png]]
+![[Verification 17_image_16.png]]
 
   
 ### 1.6.2 lets translate Compound instructions
 
 #### 1.6.2.1 If then else
-![[SPL to TLS if else.png]]
+![[Verification 17_image_17.png]]
 
 It is implemented by having two subformulas $\rho_T$ and $\rho F$ where only one of the two can be true as one contains $\neg c$ and one $c$
 
 #### 1.6.2.2 While
 
-![[SPL to TLS While.png]]
+![[Verification 17_image_18.png]]
 
 In the cooperation instruction we model first the entry step $\rho_l^E$ and then the exit step $\rho_l^X$.
 We move the control to the sub-instruction $l_i$

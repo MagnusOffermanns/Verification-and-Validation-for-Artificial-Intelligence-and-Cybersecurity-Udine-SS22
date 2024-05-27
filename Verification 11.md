@@ -41,7 +41,7 @@ q2-- a -->qfail((q_fail))
 qfail--A-->qfail
 final-->qfail
 ```
-==Learning:== Not every complement [[Deterministic Finite State Automata|Automaton]] needs a failure state. For instance if it is [[Deterministic Finite State Automata#1 Completeness|complete]] one is not needed. But we can make every complement [[Deterministic Finite State Automata|Automaton [[Deterministic Finite State Automata#1 Completeness|complete]] if we add a failure state
+==Learning:== Not every complement [[Deterministic Finite State Automata|Automaton]] needs a failure state. For instance if it is [[Deterministic Finite State Automata#1 Completeness|complete]] one is not needed. But we can make every complement [[Deterministic Finite State Automata|Automaton]] [[Deterministic Finite State Automata#1 Completeness|complete]] if we add a failure state
 
 With that we know that also the complement of an [[Deterministic Finite State Automata|Automaton]] is a automaton.
 

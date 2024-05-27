@@ -216,7 +216,7 @@ In asinchronous communication the sender can start sending the message, the rece
 
 ## 2.9 Example: Calculate the greates common divisor
 
-![[GCD in SPL.png]]
+![[Verification 17_image_2.png]]
 
 
 $y_1<>y_2$ $\equiv$ $y_1 \neq y_2$

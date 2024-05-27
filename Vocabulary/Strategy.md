@@ -12,7 +12,7 @@ aliases:
  A strategy $f$ for player $B$ from $q$ is a [winning strategy](Strategy.md) if each play from $q$, played according to f , is won by player B.
 ## 2.1 Winning region
  $W_B := \{q \in Q | B \text{ wins starting from } q\}$ is said the winning region of $B$ (the same for $A$) from the set of states from where $B$ winns. 
-- Obviously, $WA \cap WB = \emptyset$.
+- Obviously, $W_A \cap W_B = \emptyset$.
 # 3 Determined games
 
 If $W_A \bigcup W_B=Q$   we say that the game is a determined game. This means that depending on the start position it is already determined who will win.

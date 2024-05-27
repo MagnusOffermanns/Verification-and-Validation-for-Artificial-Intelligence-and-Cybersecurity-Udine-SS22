@@ -153,7 +153,7 @@ The automaton in the previous step is transformed into a game.
 
 We have the following [Muller Automata](Muller%20Automata.md) which fullfills the above mentioned specifications and we want to turn it to a [Muller Game](Muller%20Game.md).
 
-![](Verification%2043_image_7.png)
+![](Muller%20Game_image_1.png)
 
 Each State $A_x$ is split up into multiple nodes,  node that is controlled by the adversary (Alice) and into some states controlled by us $(A_x,1)$ or $(A_x,0)$ colored **green**. This means that if we are in a adversary node (All $A$ nodes colored **orange**) the adversary can choose which path to take. The path taken is the input bit. If we are in a state controlled by us, i.e. the **green** nodes, we can choose what path we want to take. This is the output bit.
 
@@ -167,7 +167,7 @@ After the input bit was choosen by the adversary, and the output bit is chosen b
 
 Lets now convert the [Muller Automata](Muller%20Automata.md) from above into a [Muller Game](Muller%20Game.md):
 
-![](Verification%2043_image_7.png)
+![](Muller%20Game_image_1.png)
 
 Below we see the converted [Muller Game](Muller%20Game.md). The square states are controlled by the adversary, the round states are controlled by us.
 
@@ -200,7 +200,7 @@ Now lets add the node if the input is $0$. We therefore create a Node $4$. Then 
 
 This are all branches for for node 1. Then we continue with node $3$ and node $6$. This results in the following graph.
 
-![](Verification%2043_image_11.png)
+![](Muller%20Game_image_2.png)
 
 ## 2.4 Games on the [Muller Game](Muller%20Game.md) arena
 

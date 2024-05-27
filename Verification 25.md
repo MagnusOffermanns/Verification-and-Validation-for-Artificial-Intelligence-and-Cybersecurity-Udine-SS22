@@ -31,7 +31,7 @@ The formula $\varphi$ consists of three [[Conjunction]]s.
 	This means that for every state $x$ we need a state  $y$ that lies ahead of $x$ (is a consecutive) that is part of the final state $F$. The distance between $x$ and $y$ might be 1 but could also be $n$ the important thing is that it lies in the future.
 
 The sentence we are looking for are the three formulas above combined:
-$$\exists Y_0 \exists Y_1....\exists Y_m \varphi_1=\{Y_0,Y_1....,Y_m\} \land \varphi_2=\{Y_0,Y_1....,Y_m\} \land $\varphi_3=\{Y_0,Y_1....,Y_m\}$$
+$$\exists Y_0 \exists Y_1....\exists Y_m \varphi_1=\{Y_0,Y_1....,Y_m\} \land \varphi_2=\{Y_0,Y_1....,Y_m\} \land \varphi_3=\{Y_0,Y_1....,Y_m\}$$
 
 Hereby we show that each [[w-regular]] [[w-regular|w-language]] can be expressed as a [[Monadic second order of one sucessor|S1S]] formula! Which concludes our prove of the first direction.
 
@@ -215,7 +215,7 @@ We have a exponential growth (the height of the exponential tower(the parameter 
 As a matter of fact [[Buechi automata|Buechi]] did not consider [[Monadic second order of one sucessor|S1S]] but a slightly different form of [[Monadic second order of one sucessor|S1S]] called [[Monadic second order of one sucessor|WS1S]] by constraining the second order quantified variables to be interpreted over finite sets. 
 
  ==One can force this constraint on [[Monadic second order of one sucessor|S1S]]. Lets do it:==
-$$X \rightarrow X= \emptyset \lor \exists (x \in X \land \forall y| x<y \implies y \not \in X)$$
+$$X \rightarrow X= \emptyset \lor \exists (x \in X \land \forall y (x <y \implies y \not \in X))$$
  
 This means that $X$ must be finite.
 
@@ -320,7 +320,7 @@ Let $w \subseteq A^*$ be the language recognized by $\mathcal{A'}$  which is: $w
 We proof that $L(A)=\overrightarrow{w}$ 
 
 First direction: (The infinite word is part of the vectorial closure of $w$)
-By definition of acceptance condition of [Buechi automata](Buechi%20automata.md), Independt if deterministic or non-determinstic, and their deterministic nature of the Automation $\mathcal{A}$, we have that $A$ accepts $\alpha$ if and only if $(\iff)$ the computation of $A$ on $\alpha$ is sucessfull. That is $IN(\sigma) \cup F = \emptyset$. Lets paint it:
+By definition of acceptance condition of [Buechi automata](Buechi%20automata.md), Independent if deterministic or non-determinstic, and their deterministic nature of the Automation $\mathcal{A}$, we have that $A$ accepts $\alpha$ if and only if $(\iff)$ the computation of $A$ on $\alpha$ is sucessfull. That is $IN(\sigma) \cup F = \emptyset$. Lets paint it:
 
 ![](Verification%2025_image_8.png)
 $\alpha$ is the infinite word accepted by $\mathcal{A}$. As it is accepted we pass through a final state $q_F$ infinitely many times.

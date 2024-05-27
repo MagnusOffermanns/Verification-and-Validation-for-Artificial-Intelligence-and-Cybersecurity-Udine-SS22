@@ -41,7 +41,7 @@ We also assume that for every word $w$ of the Language $L(A)$  ($w \in L(A)$) th
 
 Further we assume a word $w_0 \in L(A)$ that has the minimal length. i.e $\forall w \in L(A): w\geq w_0$
 
-So lets do a run of the imaginary word $w_0$ through a arbitrary [[Deterministic Finite State Automata|Automaton]] $\mathcal{A}$. It has $m$ symbols and due to our assumption $m$ needs to be greater or equal to n. as the shortest possible word $w_0$ has $n$ symbols 
+So lets do a run of the imaginary word $w$ through a arbitrary [[Deterministic Finite State Automata|Automaton]] $\mathcal{A}$. It has $m$ symbols and due to our assumption $m$ needs to be greater or equal to $n$. as the shortest possible word $w_0$ has $n$ symbols 
 i.e.: $m \geq n$
 
 So: $w_0=a_1 \cdot a_2 \cdot ... \cdot a_n$
@@ -115,7 +115,7 @@ $A^\star$ -> All possible words creatable from the alphabet of A
 $L(\mathcal{A})$ -> Set of words that are accepted by $\mathcal{A}$
 $L(\neg \mathcal{B})= A^\star - L(\mathcal{A})$
 
-If the [[Complementation|complemented]] Automaton does not exist we know that the original [[Deterministic Finite State Automata|Automaton]] is [[Universality problem]]
+If the [[Complementation|complemented]] Automaton does not exist we know that the original [[Deterministic Finite State Automata|Automaton]] is accepts all words.
 
 ==Complexity==
 With a [[Non Deterministic Finite State Atomata|NFA]] will be [[EXP-Time]] and is [[P-space complete]]
@@ -173,9 +173,9 @@ This means that we have an ==Advantage== when we have two [[Deterministic Finite
 > Let L be a Language over the Alpabet $A^\star$ i.e.: $L \subseteq A^\star$. $L$ is ==any== Language.
 > Then the following conditions are equivalent:
 > 1.  $L$ is [[Regular Languages|regular]]
-> 2.  There is a [[Equivalence problem|equivalence relation]] $\approx$ over words element of $A^\star$ that is [[finite index]] (i.e. has a finite amount of equivalence classes) and is [[right invariant]] such that $L$ us a union of [[Equivalence problem| equivalence classes]] ($\approx-classes$) .
+> 2.  There is a [[Equivalence problem|equivalence relation]] $\approx$ over words element of $A^\star$ that is [[finite index]] (i.e. has a finite amount of equivalence classes) and is [[right invariant]] such that $L$ is a union of [[Equivalence problem| equivalence classes]] ($\approx-classes$) .
 > e.g.
-> $L=[u_1]_\approx \cup [u_2]_\approx \cup [u_3]_\approx ... $
+>  $L=[u_1]_{\approx} \cup [u_2]_\approx \cup [u_3]_\approx \dots$ 
 > ($[u_1]_\approx$ is the class of all words that are equivalent to the word $u_1$)
 > 3. Some particular equivalence $\approx_l$ is [[finite index]]
 >  > $\approx_L$ is defined as:
@@ -205,7 +205,7 @@ From here it becomes clear that $ab \approx_L abab$
 $aba \approx_L a$ is true as:
 $\forall t$:
 $aba \cdot t \in L \iff  t = ba...ab$
-explanation: $aba cdot t$ is only element of $L$ if $t$ starts with a $b$ 
+explanation: $aba \cdot t$ is only element of $L$ if $t$ starts with a $b$ 
 $abab \cdot t \in L \iff  t = ab...ab$
 From here it becomes clear that $ab \approx_L abab$
 The same is true for a:
@@ -270,7 +270,7 @@ We will proof it in three steps.
 ### 2.1.1 Proof 1 -> 2
 Suppose $L$  is [[Regular Languages|Regular]]. 
 This means it is represented by some [[Deterministic Finite State Automata|Automaton]].
-$\mathcal{A}=(A,Q,\delta,q_o,F)$ be a [[DFA]]. 
+$\mathcal{A}=(A,Q,\delta,q_o,F)$ be a [DFA](Deterministic%20Finite%20State%20Automata.md). 
 $\mathcal{L}(\mathcal{A})=L$ i.e. The language accepted by the [[Deterministic Finite State Automata|Automaton]] $\mathcal{A}$ is $L$.
 
 We have to define some equivalence $\approx$ of [[finite index]] which is [[right invariant]] so that $L$ is a [[Union]] of the [[Equivalence problem|equivalence-classes]] $[...]_\approx$.
@@ -287,8 +287,8 @@ title[<u>equivalence visualized</u>]
 start --> q1
 q1((q0))--u-->dot1
 q1((q0))--v-->dot2
-dot1((...))-->q2((q))
-dot2((...))-->q2((q))
+dot1((...))-->q2((q1))
+dot2((...))-->q2((q1))
 ```
 
 
@@ -319,7 +319,7 @@ By definition when $u\approx v$ then:
 $$\delta(q_o,v)=\delta(q_0,u)$$
 Take an arbitrary $t \in A^\star$ from the definition of $\tilde{\delta}$ we know:
 $\tilde{\delta}(q_0,u\cdot t)=\tilde{\delta}(\delta(q_0,u),t)$ therefore we can substitute $\delta(q_0,u)$ by $\delta(q_0,v)$ or by their common final state $q$. Therefore we can say:
-$\tilde{\delta}(q_0,u\cdot t)=\tilde{\delta}(q,t)=\tilde{\delta}(\delta(q_0,u),t)=\tilde{\delta}(\delta(q_0,v),t)$ which means that ==$\approx$ is [[right invariant]]!==
+$\tilde{\delta}(q_0,u\cdot t)=\tilde{\delta}(q_1,t)=\tilde{\delta}(\delta(q_0,u),t)=\tilde{\delta}(\delta(q_0,v),t)$ which means that ==$\approx$ is [[right invariant]]!==
 
 #### 2.1.1.3 $L$  is a [[Union]] of Classes
 Definition of accepted words:
@@ -360,7 +360,7 @@ Because $\approx$ refines $\approx_L$ and $\approx$ is [[finite index]] this imp
 
 Visually speaking it looks like this:
 
-![[refinement_visualized.png|500]]
+![[Verification 12_image_1.png|500]]
 
 With $[ \approx_L]$ being the class being refined. And the big white bars defining the [[Equivalence problem|equivalence classes]] of the set. This shows that if $\approx$ has finitely many  [[Equivalence problem|equivalence classes]], $\approx_L$ also has finitely many equivalence classes.
 

@@ -13,7 +13,7 @@ If there is an ingoing edge labeled by $a_i$ it means that it was $TAKEN$:
 Viceversa if we have an outgoing label by $a_i$ this means $ENABLED$ in the current state.
 (s) -- $a_i$ -->
 
-![[VV22_1.jpeg]]
+![[Verification 22_image_1.jpeg]]
 
 $$A_1,A_2,...A_8 \subseteq A-\{a_i\}$$
 It is a [[Non deterministic]] automaton. Therefore we can reach multiple states with one read in symbol.
@@ -24,7 +24,7 @@ Remark: We can safely assume that all $A_j$ are equal to $A-\{a_i\}$
 
 We can see that when we build a product automaton, we can achieve that $s$ is only taking care of the transition system and $s'$ is only taking care of justice. If one of the two states has a word that is not enabled it means the machine can not move to the state that is blocked. 
 
-![[VV22_2.jpeg]]
+![[Verification 22_image_2.jpeg]]
 
 - $s$ [[Buechi automata|Buechi-automaton]] for the transition system
 - $s'$: [[Buechi automata|Buechi-automaton]] for justice
@@ -32,13 +32,13 @@ We can see that when we build a product automaton, we can achieve that $s$ is on
 
 
 ## 1.2 One initial state
-We add a initial states before the initial states from [[VV22_1.jpeg]].
+We add a initial states before the initial states from [[Verification 22_image_1.jpeg]].
 
 ==Rule:== One has to be able to go in one step from the new initial state $q_0$ to all states that were reachable with one hop from the old initial states. 
 
 One uses $q_0$ only at the beginning, then it is never entered again.
 
-![[VV22_3.jpeg]]
+![[Verification 22_image_3.jpeg]]
 
 > [!note] [[Theorem 11]]
 > We can always rewrite a [[Buechi automata]] to have a unique initial state without entering transition.
@@ -46,7 +46,7 @@ One uses $q_0$ only at the beginning, then it is never entered again.
  
 Another example:
 
-![[VV22_4.jpeg]]
+![[Verification 22_image_4.jpeg]]
 
 ---
 break
@@ -90,7 +90,7 @@ $odd \cdot odd = even$
 reminder: $\cap$ is the $and$ of sets
 
 ==Visually:==
-![[VV22_5.jpeg]]
+![[Verification 22_image_5.jpeg]]
 
 ==Examples== for [[Congruence]]s that behave this way:
 
@@ -112,7 +112,7 @@ We write $s \rightarrow_w^F s'$   if there exists a [[P-Computation]] of $\mathc
 
 ==Visually==
 
-![[VV22_6.jpeg|400]]
+![[Verification 22_image_6.jpeg|400]]
 
 
 Now if we want to find all words $w$ creatable from an alphabet $A$ that fulfill this property we write it like this:
@@ -131,7 +131,7 @@ Description: If I can go from $s$ to $s'$ using $u$ I also need to be able to go
 
 ==prove of [[Congruence]] and [[finite index]] by me of [[Lemma 12]]==
 
-![[VV22exercise_1.jpeg]]
+![[Verification 22_image_7.jpeg]]
 
 
 Prove$\approx_A$ [[Saturation|saturates]] $L(A)$ and thus $\overline{L(A)}$
@@ -165,7 +165,7 @@ This is enough to conclude that $\beta \in L(A)$ .
 > [!note] [[Corollary 5]]
 > Given a [[Buechi automata|Buechi-automaton]] $\mathcal{A}$. $\approx_A$ is a congruence that saturates $\overline{L}$.
 
-### 2.1.1 Remark: by [[Theorem 6|Myhill-Nerode Theorem|Myhill-nerode]]
+### 2.1.1 Remark: by [Myhill-Nerode Theorem](Theorem%206.md)
 
 Each class of $\approx_A$ is [[Regular Languages|Regular]].
 
@@ -174,7 +174,7 @@ Each class of $\approx_A$ is [[Regular Languages|Regular]].
 
 However I take a [[omega-words|w-word]] I am able to decompose it into a finite prefix $u$ and a infinite sequence of [[Word]]s belonging to $V$.  I.e. there is always a [[Equivalence]] that can split any [[omega-words|w-word]] in two classes. One class for $u$ and one class for the repeating part $v$.
 
-![[VV22_7.jpeg|400]]
+![[Verification 22_image_8.jpeg|400]]
 
 
 > [!note] [[Corollary 6]]
@@ -234,9 +234,8 @@ Since the [[Union]] is finite ($\overline{L} = \cup u \cdot v^w$)  and the const
 
 We can reduce each of the three problems to the [[emptyness problem]].
 For instance:
- $L(\mathcal{A}) \subseteq L(\mathcal{A}) \equiv L(\mathcal{A}) \cap L(\mathcal{A}) = \emptyset$
+ $L(\mathcal{A}) \subseteq L(\mathcal{A}') \equiv L(\mathcal{A}) \cap L(\mathcal{A}') = \emptyset$
  
-
 
 ## 2.2 Consequences of ==closure under complementation==
 A Consequence of [Closure Property| closure](Theorem%205.md) under [Complementation](Complementation.md) (what we just proved) of [[Buechi automata]] is that [[w-regular|w-regular-language]]s are univocally (only having one possible meaning, unambiguous) characterized by their set of [[ultimately periodic w-word]]s.

@@ -10,7 +10,7 @@ base case n=0: $$\phi_S^{n=0}= \bigwedge\limits_{\substack{\alpha\text{ are atom
 
 ## Example:
 Definintion structure:
-$S =(\underbrace{{1,2,3,4}}_{\text{Universe }U^S},\underbrace{<}_{ordering},\underbrace{A}_{\{0\}},\underbrace{B}_{\{1,2,3\}}$ 
+$S =(\underbrace{{1,2,3,4}}_{\text{Universe }U^S},\underbrace{<}_{ordering},\underbrace{A}_{\{0\}},\underbrace{B}_{\{1,2,3\}})$ 
 
 <,A,B are relationship symbols
  
@@ -33,12 +33,12 @@ $$\phi_S^n = \bigwedge\limits_{u \in U^S} \exists x \phi_{S[x=u]}^{n-1} \lor \fo
 $u \in U^S$: all objects of my universe
 
 What is  $\phi_{S[x=0]}^0$? 
-$\phi_{S[x=0]}^0 = \text{true} \land (x=x) \land A(x) \land \neg   \text{false} \land \neg(x<x) \land \neg B(x)$
+$$\phi_{S[x=0]}^0 = \text{true} \land (x=x) \land A(x) \land \neg   \text{false} \land \neg(x<x) \land \neg B(x)$$
 
 This are all formulas that are possible with the  interpretation of $x=0$ 
 
 How does it look when we have $x=1$?
-$\phi_{S[x=1]}^0 = \text{true} \land (x=x) \land B(x) \land \neg   \text{false} \land \neg(x<x) \land \neg A(x)$
+$$\phi_{S[x=1]}^0 = \text{true} \land (x=x) \land B(x) \land \neg   \text{false} \land \neg(x<x) \land \neg A(x)$$
 
 ==note:== $A(x)$ turns to $B(x)$ in $x=1$ as the second position of $'abbb'$ is b instead of a where $x=0$
 
@@ -82,12 +82,12 @@ We note that $\phi_{S}^1$ which is the [[Hintikka Formula]] of level 1 is differ
 Lets look what the individual $\phi_{S[x=u]}^1$  are?
 
 - $\phi_{S[x=0]}^1$
-	> $\phi_{S[x=0]}^1= \bigwedge\limits_{v\in U^S} \exists y \phi_{S[x=0][y=v]}^0 \quad \land \quad \forall y \bigvee\limits_{v\in U^S}\phi_{S[x=0][y=v]}^0$
-	> How does it look when $[y=2]$
-	> $$\phi_{S[x=0][y=2]}^0=\text{true} \land (x=x) \land (y=y) \land (x<y) \land A(x)\land B(y)\land...$$ $$...\land \neg\text{false} \land \neg (x<x) \land \neg(y<y) \land \neg A(y)\land \neg B(x)$$ 
-	> What are the important things in this formula stating something about the structure? Its this three things: $A(x),B(y)$ and $(x<y)$ the rest is obvious.
-	> How does it look when $\phi_{S[x=0][y=0]}^0$
-	> $$\phi_{S[x=0][y=0]}^0=\text{true} \land (x=x) \land (y=y) \land (x=y) \land A(x)\land A(y)\land...$$ $$...\land \neg\text{false} \land \neg (x<x) \land \neg(y<y) \land \neg(y<x) \land \neg B(x)\land \neg B(y)$$
+	$\phi_{S[x=0]}^1= \bigwedge\limits_{v\in U^S} \exists y \phi_{S[x=0][y=v]}^0 \quad \land \quad \forall y \bigvee\limits_{v\in U^S}\phi_{S[x=0][y=v]}^0$
+	 How does it look when $[y=2]$
+	 $$\phi_{S[x=0][y=2]}^0=\text{true} \land (x=x) \land (y=y) \land (x<y) \land A(x)\land B(y)\land...$$ $$...\land \neg\text{false} \land \neg (x<x) \land \neg(y<y) \land \neg A(y)\land \neg B(x)$$ 
+	 What are the important things in this formula stating something about the structure? Its this three things: $A(x),B(y)$ and $(x<y)$ the rest is obvious.
+	 How does it look when $\phi_{S[x=0][y=0]}^0$
+	$$\phi_{S[x=0][y=0]}^0=\text{true} \land (x=x) \land (y=y) \land (x=y) \land A(x)\land A(y)\land...$$ $$...\land \neg\text{false} \land \neg (x<x) \land \neg(y<y) \land \neg(y<x) \land \neg B(x)\land \neg B(y)$$
 
 How does the complete formula look like?
 $$\phi_S^2=(\exists x \exists y (x<y) \land A(x) \land B(y) \land...)\land$$
@@ -117,7 +117,7 @@ Break
 
 We have:
 [[Symbols]]: e.g.    a,b,c... or 0,1,2...
-[[Words]]: e.g. abbca
+[Words](Word.md): e.g. abbca
 variables used for words are $w,u,v$ e.g. $u = abbca$
 length of a word: e.g $|a|$= number of [[Symbols]] of word
 e.g. $u = abbca$ i.e. $|u|=5$
@@ -169,14 +169,14 @@ A [[Language]] $L$ over A, is a subset of $A^* (L \leq A^*)$  i.e. a language is
 # Automata
 Automata stands for [[Deterministic Finite State Automata]]
 > [!note] Definintion: [[Deterministic Finite State Automata]]
-> A [[DFA]] \mathcal{A} is a tuple $(Q,A,\delta,q_0,F)$ where
+> A [DFA](Deterministic%20Finite%20State%20Automata.md) $\mathcal{A}$ is a tuple $(Q,A,\delta,q_0,F)$ where
 > - $Q$ is a finite set of states
 > - $A$ is a finite set of Symbols i.e. [[Alphabet]]
 > - $\delta$ is a [[Transition function]]  $\delta: Q \times A \rightarrow Q$
 > - $q_0$ is the initial state and is $q_0 \in Q$ 
 > - $F$ is a subset of $Q$ i.e $F \subseteq Q$ containing all final states
 
-==1830==
+
 How do we paint a [[Deterministic Finite State Automata|Automata]]?
 example graph:
 ```mermaid
@@ -200,12 +200,12 @@ q1((q1))--c-->q4((q4))
 [[Acceptance condition]]: Defines how a word $w$ needs to be formed so that  a [[Deterministic Finite State Automata|Automata]] $\mathcal{A}$ (starting from a initial state $q_0$) after processing ends in a state which is part of the set of final states $F$. 
 i.e $\hat{\delta}(q_0,w) \in F$
 
-The language $L(\mathcal{A})$ accepted by $\mathcal{A}$ consists of all and only those words in $A*$ which are accepted by the [[Deterministic Finite State Automata|Automata]] (as of the definition of the [[Acceptance condition]]) that means the language will be a subset of $A*$ i.e. $L(\mathcal{A}) \subseteq A^*$
+The language $L(\mathcal{A})$ accepted by $\mathcal{A}$ consists of all and only those words in $A^*$ which are accepted by the [[Deterministic Finite State Automata|Automata]] (as of the definition of the [[Acceptance condition]]) that means the language will be a subset of $A*$ i.e. $L(\mathcal{A}) \subseteq A^*$
 
 ##  [[Regular Languages]]
 A language $L \subseteq A^*$ is ==Regular== if it is accepted by a [[Deterministic Finite State Automata|DFA]] $\mathcal{A}$ that is $L=L(\mathcal{A})$
 
-The difference between $\delta$ and $\hat{\delta}$ is that one only has symbols ($\delta$)as inputs the other has words ($\hat{\delta}$) as inputs. From now on we will use $\delta$ for both automata with words and [[Deterministic Finite State Automata|Automata]] that have symbols as input indiscriminantely.
+The difference between $\delta$ and $\hat{\delta}$ is that one only has symbols ($\delta$) as inputs the other has words ($\hat{\delta}$) as inputs. From now on we will use $\delta$ for both automata with words and [[Deterministic Finite State Automata|Automata]] that have symbols as input indiscriminantely.
 
 # [[Non Deterministic Finite State Atomata]] ([[Non Deterministic Finite State Atomata|NFA]])
 Definition:

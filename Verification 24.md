@@ -13,7 +13,7 @@ Formulas of $S1S_A$ are obtained from atomic ones, by possibly applying Boolean 
 
 Example: $\exists x, \forall X$ are both admissible in this language. 
 
-![[VV24_1.jpeg]]
+![[Verification 24_image_1.jpeg]]
 
 $A=\{a,b,c\}$
 The interpretation of $Q_a$is the positions where there is $a$ occurring in $\alpha$. i.e.:
@@ -50,11 +50,11 @@ We show how to define ordering $<$ in terms of successor (second order definable
 $x<y$ can be rewritten as:
 $$\forall X (x+1 \in X \land \forall z (z \in X \implies z+1 \in X )) \implies y \in X $$
 
-![[VV24_2.jpeg|600]]
+![[Verification 24_image_2.jpeg|600]]
 
 Why do we use $\forall X$ and not $\exists A$ ?
 
-![[VV24_3.jpeg|600]]
+![[Verification 24_image_3.jpeg|600]]
 
 
 ## 1.2 What does Monadic mean?
@@ -96,9 +96,9 @@ $$\forall x \forall y (x \in Q_a \land y \in Q_a \land x < y \land \neg \exists 
 - $\exists X (x \in X \land \forall z (z \in X \implies z+1 \not \in X) \land y \not \in X )$ This means that we can create a set $X$ so that once symbol is in the set, and the following is not in the set, denoting the allowed positions of $a$ (every other position), lastly the following consecutive $y$ needs to be in the set of even positions ($X$) and not in the set of  uneven positions $\overline{X}$
 
 Visually :
-![[VV24_4.jpeg|600]]
+![[Verification 24_image_4.jpeg|600]]
 
-![[VV24_5.jpeg|600]]
+![[Verification 24_image_5.jpeg|600]]
 
 
 
@@ -117,7 +117,7 @@ Lets consider a [[omega-words|w-word]] $\alpha$ how can we rewrite it in the new
 
 lets encode $a=(0,0),b=(0,1),c=(1,0)$
 
-![[VV24_6.jpeg|600]]
+![[Verification 24_image_6.jpeg|600]]
 
 The interpretation of $X_1$ that captures $\alpha$ is: $int(X_1)=\{3\}$
 The interpretation of $X_2$ that captures $\alpha$ is: $int(X_2)=\{1,2\}$
@@ -141,7 +141,7 @@ An  [[w-regular|w-language]] $L \subseteq A^w$ is definable if $L=L(\phi)$ for s
 > [!note] [[Lemma 14]] (Closure under projection)
 > Let $\psi(X_1,X_2,...,X_{i-1},X_{i+1},X_n)$ be the [[Monadic second order of one sucessor|S1S]] formula: $\exists X_i: \phi(X_1,X_2,...,X_{i-1},X_i,X_{i+1},X_n)$. If $L(\phi)$ is [[w-regular]], then $L(\psi)$ is also [[w-regular]] as well.
 
- ![[VV24_x.jpeg|600]]
+ ![[Verification 24_image_7.jpeg|600]]
 
 ==What does this mean? What is even Projection?==
 [[Projection]] is the same as in Databases.

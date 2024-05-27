@@ -29,7 +29,7 @@ The decision procedure for [LTL](temporal%20logic.md) we present here is covered
 We have already encountered the following modalities:
 - $G(p) \approx p \land X(G(p))$
 	A operator that is true if a variable $p$ is always true in the future the shortform for this is $G(P)$
-- $F(p) \approx p \lor X(F(p)$
+- $F(p) \approx p \lor X(F(p)$)
 	A operator that is only true if $p$ gets true sometimes in the future we denote this as $F(p)$.
 - $(p)U(q) \approx q \lor (p \land X((p)U(q)))$
 	$(p)U(q)$ is only true if $p$ is true until $q$ is true. If $p$ ever goes False before $q$ becomes true, the statement is false. The statement is also only true if $q$ ever becomes true in the future. If $q$ stays $False$ until infinity $(p)U(q)[t]$ also stays False.
@@ -38,7 +38,7 @@ In this round we will expand them:
 
 1. $G(p) \approx p \land X(G(p))$
 	The state does not only have to be always true in the future $[t+1]$, but also not i.e. at timepoint $[t]$
-2.  $F(p) \approx p \lor X(F(p)$
+2.  $F(p) \approx p \lor X(F(p))$
 	To fullfill $F(P)$, $p$ does not need to be true at a future time, but can also be true at timepoint $[t]$.
 3. $(p)U(q) \approx q \lor (p \land X((p)U(q)))$
 	Either $q$ is true now (i.e. $[t]$) or until is shifted by one time from $[t]$ to $[t+1]$. To still force $p$ to be true at time $[t]$ we logically and it with the $U$ operator.
@@ -60,7 +60,7 @@ We look for the smallest set of formulas that fullfill the following requirement
 
 Lets define an example:
 
-$\varphi:$  $G(x) \land F(\neg p)$
+$\varphi:$  $G(p) \land F(\neg p)$
 
 >[!Note] [Satisfiability](Satisfiability.md)
 >$\varphi$ is not [Satisfiable](Satisfiability.md)
@@ -167,7 +167,7 @@ The closure contains 3 basic formulae:
 2. $X(F(\neg p))$
 3. $p$
 
-Lets suppose that $X(G(p) \in A$ ,$X(G(\neg p)) \in A$ while $p \not \in A$
+Lets suppose that $X(G(((p)) \in A$ ,$X(G(\neg p)) \in A$ while $p \not \in A$
 
 Hereby we can do some deductions:
 - From $p \not \in A$ $\Rightarrow$ $\neg p \in A$
@@ -230,7 +230,7 @@ Sketch of the proof:
 >[!Note] An immediate consequence
 >Since $\sigma$ is a model of $\phi$ we have that $(\sigma,0) \models \phi$ and thus $\phi \in A_0$
 
-We call this initial satisfiability
+We call this [[initial satisfiability]]
 
 i.e. **The opposite does not hold:** not every infinite path in  $T_\varphi$ is induced by some model $\sigma$
 

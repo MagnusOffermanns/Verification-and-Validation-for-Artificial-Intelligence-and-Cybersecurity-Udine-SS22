@@ -9,7 +9,7 @@ aliases: Buechi-automaton, Deterministic Buechi Automata, Deterministic Buechi A
 
 # 2 Deterministic [[Buechi automata]]
 
-A [DBA](Buechi%20automata.md) is a Tuple:
+A [DBA](Buechi%20automata.md) is a Tuple: 
 $$\mathcal{A}=\{Q,A,\delta,q_0,F\}$$
 where $Q,A,q_0$ and $F$ are defined as for a [NBA](Buechi%20automata.md)
 and:

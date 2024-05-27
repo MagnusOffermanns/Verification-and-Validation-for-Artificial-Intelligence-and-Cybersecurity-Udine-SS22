@@ -12,7 +12,7 @@ $x^S,...=$ definition of free variables
 
 ## 1.1 Examples
 <mark style="background: #FFB86CA6;">Note:</mark> $'='$ is always in the signature
-### 1.1.1 $$FO[\mathbb{N},<]$$
+### 1.1.1 $FO[\mathbb{N},<]$
 Use-case: is the structure with which one describes discrete,linear time.
 <mark style="background: #FF5582A6;">NOTE: </mark>   '<' is not a relational symbol but a real relation. The total order.
 Contains the formulas: 
@@ -26,7 +26,7 @@ $$\forall xy (x=y \lor x < y \lor y <x)...$$
 meaning: the element is either equal,greater or smaller than x
 
 #### 1.1.1.1 Where did the free variables go?
-As can be seen in the formulas above. There are no free variables. This is because there is not interpretation of free variables.
+As can be seen in the formulas above. There are no free variables. This is because there is no interpretation of free variables.
 
 For instance if we have a formula:
 $$\phi(x,y)$$ 
@@ -64,7 +64,7 @@ Result: No it is not possible (he did not explain why)
 We learn that $FO[\mathbb{N},<]$ is more powerful than$FO[\mathbb{N},+1]$ as we can not define a set that only contains $f: n \rightarrow n+1$.
 
 
-### 1.1.2 [[Presburg arithmetic]]: $$ FO[\mathbb{N},+]$$
+### 1.1.2 [[Presburg arithmetic]]: $FO[\mathbb{N},+]$
 - $\mathbb{N}$: Natural natural numbers 
 - $+$: ternary relation $+ \subseteq \mathbb{N} \times \mathbb{N} \times \mathbb{N}$ i.e. $(i,j,k) \in + \iff k=i+j$
 
@@ -74,22 +74,24 @@ Applications:
 - distributed systems (Petri nets)
 
 Example:
-![[Presburg_example1.png|400]]
+![[Verification 6_image_1.png|400]]
 We can define a formula (see image above)
 $$\phi_A(x,y)= (5 \cdot y<= 2 \cdot x - 2)$$
 - But we have a problem how do we express multiply? By applying $+$ multiple times.
 		For example: $5 \cdot y = y+y+y+y+y$
 - And how do we express $<=$? We rewrite the formula to:
-		 $(5 \cdot y<= 2 \cdot x - 2)\iff \exists z (5x+z)=(2x-2)$ 
-		 
+		 $(5 \cdot y<= 2 \cdot x - 2)\iff \exists z (5y+z)=(2x-2)$ 
+
+This checks for the existence of a value $z$ that we can add to $5y$ to reach $2x-2$. If there is no $z$ that means that $5y$ is already bigger than $2x-2$
+
 Or we define another formula and calculate its intersection:
 $$\phi_B(x,y)= (9y >= 3x-2)$$
-![[Presburg_example_2.png|400]]	
+![[Verification 6_image_2.png|400]]	
 
 And then we can calculate a projection on the y axis:
 $$\phi_c(x)=\exists y \phi_{A \cap B}(x,y)$$
 
-![[Presburg_example3.png|400]]
+![[Verification 6_image_3.png|400]]
 		
 ### 1.1.3 [[Peano arithmetic]]:  $$FO[\mathbb{N},+,\cdot]$$
 (sometimes undecidable (By reduction from Hilberts 10th problem, satisfiability of Diophantine equations), more powerful than [[Presburg arithmetic]])
@@ -135,11 +137,11 @@ As 1.  and 2. have the probability of 1 or 0 it means that we can write this pro
 
 If we have an overview over all formulas we can split them up into three parts. Valid, undecidable and unsatisfiable. Some formulas are always valid, for some formulas we can deduct they are never satisfiable (unsatisfiable) and sometimes we can not determine whether it falls into one class or the other i.e. it is undecidable as seen in the [[Verification 6#^560de9|image]] below.
 
-![[Ven_diagramm_validity_1.png|400]] ^560de9
+![[Verification 6_image_4.png|400]] ^560de9
 
 Now when we change our interest from *is the formula Valid or Unsatisfiable* to *is the formula almost surely true or almost surely false* in the sense that the probability is always 0 or 1 we can change the vendiagram  from having three areas (Valid, undecidable, Unsatisfiable) to only having two areas (Almost surely true, Almost surely false).  [[Verification 6#^55cb90|See image below]]
 
-![[Ven_diagram_validity_2.png|400]] ^55cb90
+![[Verification 6_image_5.png|400]] ^55cb90
 
 ---
 
@@ -151,18 +153,18 @@ How do we compare our [[FO-theories]]?
 # 2 Logical [[reduction|reductions]]
 Recall: [[reduction|reductions]]!
 
-A reduction from P to Q  is an algorithm F that solves P using an oracle that returns solutions to Q.
+A reduction from $P$ to $Q$  is an algorithm $F$ that solves P using an oracle that returns solutions to $Q$.
 
-Imagine P being easier than Q.
+Imagine P being easier than $Q$.
 
-We transform Q to be  easier. P should be easier afterwards using F
+We transform $Q$ to be  easier. $P$ should be easier afterwards using F
 
 example:
 many to one reduction: $\forall x, P(x) \iff Q(F(x))$ 
 
 ==If we want to see similarities we can ask does the one theory reduce to the other theory?==
 
-Note: problems can be [[FO-theories]]
+Note: problems can be [FO-Theories](Theory.md)
 e.g 
 $$P = FO[\textcolor{green}{S}] = \{\phi: \textcolor{green}{S} \models \phi\}$$
 $$Q = FO[\textcolor{red}{T}] = \{\phi: \textcolor{red}{T} \models \phi\}$$
@@ -207,20 +209,20 @@ $$\alpha_<(x,y)=\exists z,u,v \quad (x=z \cdot a \cdot u \land y=z\cdot b \cdot 
 
 meaning:
 - $(x=z \cdot a \cdot u \land y=z\cdot b \cdot v)$ meaning:
-	> Means that both $x$ and $y$ have a common ancestor $z$ and are on the same level of the tree. For $y$ to be bigger than $x$ a 'b' has to follow $z$ to create $y$.
-	> Additionally a 'a' has to follow $z$ to create $x$ if we do not have this statement we would define a $=<$ as $y$ and $x$ could be equal.
-	> ==as an example:==
-	> $x=aa$, $y=ab$
-	> The common ancestor $z=a$
-	> As we take the left branch to create $x$ and the right branch to create $y$ it follows that $x<y$.
+	 Means that both $x$ and $y$ have a common ancestor $z$ and are on the same level of the tree. For $y$ to be bigger than $x$ a 'b' has to follow $z$ to create $y$.
+	 Additionally a 'a' has to follow $z$ to create $x$ if we do not have this statement we would define a $=<$ as $y$ and $x$ could be equal.
+	 ==as an example:==
+	 $x=aa$, $y=ab$
+	 The common ancestor $z=a$
+	 As we take the left branch to create $x$ and the right branch to create $y$ it follows that $x<y$.
 - $(x=y\cdot a \cdot u )$ meaning:
-	>Is the case that $y$ is a predecessor of $x$ and to reach $x$ one has to take a left brach. Hereby $y$ has a higher value than $x$.
+	Is the case that $y$ is a predecessor of $x$ and to reach $x$ one has to take a left brach. Hereby $y$ has a higher value than $x$.
 	==As an example:==
 	$y=a$, $x=aa$
 	As we have to go left on the tree after $y$ to reach $x$. $x$ has a smaller value than $y$.
 
 - $(y=x\cdot b \cdot v)$ meaning:
-	>$x$ is a predecessor of $y$ but why has a higher value as we have to take a right branch to reach $y$ from $x$
+	$x$ is a predecessor of $y$ but why has a higher value as we have to take a right branch to reach $y$ from $x$
 	==As an example:==
 	$x=b,y=bb$
 	$x$ is smaller $y$ as one has to take a right branch to reach $y$ from $x$
@@ -231,9 +233,9 @@ $\textbf{We want to } \underline{\textbf{automatically}} \textbf{ derive F from 
 But what does automatically mean?
 
 Let say we have a formula $\phi$ over $S$ and we want to logically reduce it to a formula $F(\phi)$ over $T$ i.e.
-$$\phi \text{ over } \underbrace{S} \rightarrow F(\phi) \text{ over } T$$
+$$\phi \text{ over } \underbrace{S} \rightarrow F(\phi) \text{  over  } T$$
 For instance:
-> $\phi \text{ over } S =(x<y)$
-> We need to replace '<' by $\alpha_<(x,y)$ over $T$ i.e.
-> $\phi \text{ over } T = \alpha_<(x,y)$
+	$\phi \text{ over } S =(x<y)$
+	 We need to replace '<' by $\alpha_<(x,y)$ over $T$ i.e.
+	 $\phi \text{ over } T = \alpha_<(x,y)$
 

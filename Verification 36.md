@@ -14,7 +14,7 @@ Finally check if $s \in \phi$
 	- $R$ -> Edges
 - linear to the size of the formula i.e. $|\phi|$ 
 
->[Note] Difference to [LTL](temporal%20logic.md) [Model-checking](Model-checking.md)
+>[!Note] Difference to [LTL](temporal%20logic.md) [Model-checking](Model-checking.md)
 >In [LTL](temporal%20logic.md) model checking we need to build a [Tableaux](Tableaux.md). because we need to build a [Tableaux](Tableaux.md) we might get an exponential blowup in relation to the size of the formula.
 >
 >In [CTL](Branching%20time%20temporal%20logic.md) [Model-checking](Model-checking.md) we do not need to build a [Tableaux](Tableaux.md) therefore the computational comlexity is only polynomial.

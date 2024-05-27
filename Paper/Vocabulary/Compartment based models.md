@@ -1,0 +1,1 @@
+![](Compartment%20based%20models_image_1.png)

@@ -34,4 +34,5 @@ Relations we will need:
 the + Relation (Addition)
 the * Relation (Multiplication) -> the inverse is defined by this as well
 
-$\phi(x_1,x_2,y_1,y_2,z_1,z_2)= \exists w_1,w_2,.... w_1+w_2(x_1-y1)/
+$\phi(x_1,x_2,y_1,y_2,z_1,z_2)= \exists w_1,w_2,.... w_1+w_2(x_1-y_1)$
+

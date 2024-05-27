@@ -1,0 +1,1 @@
+The **syntax** of a computer language is the rules that define the combinations of symbols that are considered to be correctly structured expressions

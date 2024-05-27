@@ -96,7 +96,7 @@ What is an [[epsilon-closure]]:
 We can not only define the [[epsilon-closure]] for single states but also for a set of states:
 for all $q \in 2^Q$ we can define the [[epsilon-closure]] of the set ($\underline{q}$)=$\bigcup\limits_{q\in \underline{q}} \epsilon\text{-closure}(q)$ 
 How do we generalize it to entire words $w$ preceeded by a symbol $a$?
-$\hat{\Delta}(q,wa)=\epsilon=\text{closure}(\bigcup\limits_{p \in \hat{\Delta}(q,w)}\Delta (p,a)$
+$\hat{\Delta}(q,wa)=\epsilon-\text{closure}(\bigcup\limits_{p \in \hat{\Delta}(q,w)}\Delta (p,a)$
 
 What does this mean? It is the $\epsilon$-closure of all states that one can reach by first applying first the individual symbols of the word $w$ followed by a symbol $a$. After every symbol applied a $\epsilon$-closure needs to be applied. Example:
 
@@ -118,14 +118,14 @@ How does our $\epsilon$-closure($\Delta,wa$) look like?
 $\epsilon\text{-closure}(p_2)$
 2. when we read in y we have two states that we can possibly reach ($p_3,p_4$)so we add them both
 $\epsilon\text{-closure}(p_2)\cup\epsilon\text{-closure}(p_3)\cup\epsilon\text{-closure}(p_4)$
-3. Now that we process $a=z$ we have two states that we can be in, first: $p3$ which adds itself and from state,  and second:$p_4$ we can reach $p_3$ and $p5$.
+3. Now that we process $a=z$ we have two states that we can be in, first: $p_3$ which adds itself and from state,  and second:$p_4$ we can reach $p_3$ and $p_5$.
 $\epsilon\text{-closure}(p_2)\cup\epsilon\text{-closure}(p_3)\cup\epsilon\text{-closure}(p_4)\cup \epsilon\text{-closure}(p3)\cup\epsilon\text{-closure}(p_5)\cup\epsilon\text{-closure}(p3)$
 4. Now summarizing we delete the double-mentions and denote from which symbol each $\epsilon$-closure comes from 
 $\underbrace{\epsilon\text{-closure}(p_2)}_{x}\cup \underbrace{\epsilon\text{-closure}(p_3)}_{y \& z \& z}\cup \underbrace{\epsilon\text{-closure}(p_4)}_{y}\cup\underbrace{\epsilon\text{-closure}(p_5)}_{z}$
 
 # [[Theorem 3]]
 > [!note] [[Theorem 3]]
-> For all [[NFA with epsilon-move]] $\mathcal{A}$ there exists a [[NFA]] without $\epsilon$-move $\mathcal{A}'$ such that the languages L are accepted by both [[Deterministic Finite State Automata|Automaton]] i.e. $L(\mathcal{A})=L(\mathcal{A}'')$ and vice versa.
+> For all [[NFA with epsilon-move]] $\mathcal{A}$ there exists a [NFA](Non%20Deterministic%20Finite%20State%20Atomata.md) without $\epsilon$-move $\mathcal{A}'$ such that the languages L are accepted by both [[Deterministic Finite State Automata|Automaton]] i.e. $L(\mathcal{A})=L(\mathcal{A}'')$ and vice versa.
 
 To summarize:
 ==[[Deterministic Finite State Automata|DFA]]$\equiv$[[Non Deterministic Finite State Atomata|NFA]]$\equiv$[[NFA with epsilon-move]]==
@@ -137,23 +137,23 @@ Sometimes we have a limited set of symbols (like a limited resource). The epsilo
 Let $A$ be a finite Alphabet.
 We define 3 Classes:
 1. [[Restricted Regular Expression]]s
-> They are built from a finite set of words over $A$ (made of symbols of $A$) by using the operations:
-> 1. $\cup$ (Union)
-> 2. $\cdot$ ([[Concatenation]])
-> 3. $*$ ([[Kleene-closure]] also called [[Kleene-closure|Kleene star]]) 
+	They are built from a finite set of words over $A$ (made of symbols of $A$) by using the operations:
+	1. $\cup$ (Union)
+	 2. $\cdot$ ([[Concatenation]])
+	 3. $*$ ([[Kleene-closure]] also called [[Kleene-closure|Kleene star]]) 
 2. [[General Regular Expressions]]
-> They are built from a finite set of words over $A$ (made of symbols of $A$) by using the operations:
-> 1. $\cup$ (Union)
-> 2. $\cdot$ ([[Concatenation]])
-> 3. $*$ ([[Kleene-closure]] also called [[Kleene-closure|Kleene star]]) 
-> 4. $\cap$ ([[Intersection]])
-> 5. $\neg$([[Complementation]])
+They are built from a finite set of words over $A$ (made of symbols of $A$) by using the operations:
+ 1. $\cup$ (Union)
+ 2. $\cdot$ ([[Concatenation]])
+ 3. $*$ ([[Kleene-closure]] also called [[Kleene-closure|Kleene star]]) 
+ 4. $\cap$ ([[Intersection]])
+ 5. $\neg$([[Complementation]])
 3. [[Star-free Regular Expressions]]
 Like [[General Regular Expressions]] without the [[Kleene-closure|Kleene star]]:
-> 1. $\cup$ (Union)
-> 2. $\cdot$ ([[Concatenation]])
-> 3. $\cap$ ([[Intersection]])
-> 4. $\neg$([[Complementation]])
+	 1. $\cup$ (Union)
+	 2. $\cdot$ ([[Concatenation]])
+	 3. $\cap$ ([[Intersection]])
+	4. $\neg$([[Complementation]])
 
 [[Restricted Regular Expression]]s and [[General Regular Expressions]] are equally expressive. They are second order logic.
 [[Star-free Regular Expressions]] are strictly less expressive than [[Restricted Regular Expression]]s and [[General Regular Expressions]]. The absence of the [[Kleene-closure|Kleene star]] makes it only first order logic.
@@ -188,21 +188,24 @@ And all this states that we need to step though (inbetween) to get to $p_j$ need
 The sets $R_{i,j}^k$ can be defined recursively.
 
 - $R_{i,j}^0 \rightarrow$ is a way to forbid any intermediate steps as the index of the states starts at 
-> $R_{i,j}^0=\begin{cases}\{a: & \delta(q_i,a)=q_j & \text{ if } i \neq j\\ \{a: & \delta(q_i,a)=q_j \cup \{\epsilon\} & \text{ if } i = j \end{cases}$  
-> How does this look visually.
-> In the first case we change state but do not have any states in between.
+	 $R_{i,j}^0=\begin{cases}\{a: & \delta(q_i,a)=q_j & \text{ if } i \neq j\\ \{a: & \delta(q_i,a)=q_j \cup \{\epsilon\} & \text{ if } i = j \end{cases}$  
+	How does this look visually.
+	In the first case we change state but do not have any states in between.
 ```mermaid
 graph LR
 title[<u>case i != j</u>]
 qi(("q(i)"))--a-->q2(("q(j)"))
 ```
-> In the second case we do not change state. That means that we have to cover all symbols that lead back to our initial state as well as the $\epsilon$-move.
+
+In the second case we do not change state. That means that we have to cover all symbols that lead back to our initial state as well as the $\epsilon$-move.	
+
 ```mermaid
 graph LR
 title[<u>case i = j</u>]
 qi(("q(i)"))--a-->qi(("q(i)"))
 qi(("q(i)"))--epsilon-->qi(("q(i)"))
 ```
+
 - Now we define $R_{i,j}^k$ by splitting it up in multiple parts
 1. The paths from $i$ to $j$ where the intermediate steps are strictly smaller than k i.e. $< k$. This can be expressed as follows:
 $$R_{i,j}^{k-1}$$
@@ -236,7 +239,8 @@ qk1(("q(k)"))-->qj(("q(j)"))
 ==To summarize==
 $$R_{i,j}^k=R_{i,j}^{k-1} \cup R_{i,k}^{k-1} \cdot (R_{k,k}^{k-1})^\star \cdot R_{k,j}^{k-1}$$
 
-==note:== We are currently using [[Restricted Regular Expression]]s as we only use $\cup,\cdot$ and the [[Kleene-closure|Kleene star]] $\star$
+>[!Note]
+>We are currently using [[Restricted Regular Expression]]s as we only use $\cup,\cdot$ and the [[Kleene-closure|Kleene star]] $\star$
 
 From what we showed we can conclude that for all possible choices for $i,j,k$ there exists a [[Restricted Regular Expression]] that defines $R_{i,j}^k$.
 
@@ -360,7 +364,7 @@ final-->f2
 ```
 
 Question: how do we avoid the epsilon move?  We just connect all states from where we get from the startstate $q_2$ of $A_2$ using a symbol to $f_1$. We are not able to delete $q_1$ as it is still possible to go back to the initial state. See image:
-![[Pasted image 20220729145910.png|700]]
+![[Verification 10_image_1.png|700]]
 
 ==Important:== We can do the proof entirely without epsilon move as [[Non Deterministic Finite State Atomata]], [[Non Deterministic Finite State Atomata]] with epsilon move and [[Deterministic Finite State Automata]] have the same [[expressiveness]]. 
 
@@ -381,8 +385,9 @@ final-->f0
 ```
 
 2. The upper [[Non Deterministic Finite State Atomata]] is not done.The [[Kleene-closure|Kleene star]] has a special case that is the empty set i.e we need a option to go to the final state without any symbols. ==This is the final [[Non Deterministic Finite State Atomata]]== 
+
+<b>The combined Automata R = R1*</b>
 ```mermaid
-title[<b>The combined Automata R = R1*</b>]
 graph LR
 start-->q0
 q0-->q1 
@@ -394,6 +399,6 @@ f1--epsilon-->q1
 final-->f0
 ```
 
-It immidiately follows that [[Restricted Regular Expression]]s define [[Regular Expression]]s
+It immediately follows that [[Restricted Regular Expression]]s define [[Regular Expression]]s
 
 ---

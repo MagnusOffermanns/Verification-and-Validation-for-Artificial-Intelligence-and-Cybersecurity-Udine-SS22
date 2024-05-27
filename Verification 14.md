@@ -9,7 +9,7 @@ We start start with empty sets $T$ and $S$ i.e. $\{\epsilon \}$.
 The first goal is to make the set $S$ [[T-complete]]
 
 Therefore we go into a while loop. 
-We look for a $s$ and a word $a$ that does not have a equivalent in the set $S$. Then we add the concatenated $s$ and $a$ i.e. $s \cdot a$.
+We look for a word $s$ and a word $a$ that does not are not equivalent in the set $S$. Then we add the concatenated $s$ and $a$ i.e. $s \cdot a$.
 
 We do not violate [[T-Minimal]] property because we only add $sa$ if there is no $s'$ that is equivalent to $sa$. How often do we do this? As $S$ represents the [[Equivalence class]]es of a equivalence that is coarser than the [[Theorem 6|Myhill-Nerode equivalence]] the most number is the [[Cardinality]] of the [[Theorem 6|Myhill-Nerode equivalence]]-1.
 
@@ -47,7 +47,7 @@ a --b-->epsilon
 
 The entire algorithm can be seen in this screen shot and is [[P-Time|polynomial time]].
 
-![[learner_strategy.png]]
+![[Verification 14_image_1.png]]
 
 
 Now we do a example from 30:00 on to the pause.
@@ -59,7 +59,7 @@ Break
 
 Now we will prove that $S$ will become [[T-complete|T-incomplete]] when adding the counterexample. It is a prove by contradiction
 
-![[proove_summary_s-t-incomlete.png|400]]i
+![[Verification 14_image_2.png|400]]i
 
 
 ## 1.1 [[Hankel matrices]]
@@ -67,7 +67,7 @@ Now we will prove that $S$ will become [[T-complete|T-incomplete]] when adding t
 infinite matrix representing a Language $L_0$. it is highly redundant.
 
 
-![[Hankel-Matrix 1.png]]
+![[Verification 14_image_3.png]]
 
 
 Works also for [[Non Deterministic Finite State Atomata|NFA]] instead of the 1's or 0's one puts in probabilities.

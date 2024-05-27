@@ -128,7 +128,7 @@ The results of the computations are equivalent
 
 Now we need to identify classes which computations are equivalent. Then we only need to check only one representative of each class.
 
-It suffices to check a reduced sate space, which contains (at least) one representative computation for each class of equivalent computations.
+It suffices to check a reduced state space, which contains (at least) one representative computation for each class of equivalent computations.
 
 
 ## 2.3 Further Advanced techniques
@@ -625,7 +625,7 @@ That means our algorithm should return the empty set.
 
 
 1. We start with $\tau(true)$ 
-	This is equivalent to $\tau(\{s_0,s_1,s_2,s_3,s_4,s_5\})$
+	This is equivalent to $\tau(\{s_0,s_1,s_2,s_3,s_4\})$
 	Lets now evaluate it. The first three states that we can add to our result are $\{s_1,s_2,s_3\}$ as $p$ is true in this states and so the formula $p \land E(X(z))$ evaluates $true$ for sure. The next question is now which of the remaining states makes $E(X(z))$ $true$. Here $z$ is the set of states that we initially put into the calculation i.e. $\{s_0,s_1,s_2,s_3,s_4\}$. The formula $E(X(z))$ asks which of them has a successor in the set $z$. As every node as ha successor, the result is: $E(X(z))=\{s_0,s_1,s_2,s_3,s_4\}$.
 	
 	This results in the following formula:
@@ -648,7 +648,7 @@ Now we can see that $E(G(p))$ is true for the path $s_3^\omega$, as this path al
 And indeed the formula converges to the following:
 $$vz.p \land E(X(z))=\underbrace{\{s_1,s_2,s_3\}}_{p} \land \underbrace{\{s_3\}}_{E(X(z))}=\{s_3\}$$
 >[!Note] [[Lemma 23]]
->In the case of the existential quantifier: $E((f_1)U(f_2))$ is the least fixpoint of the predicate transformer $\tau(z)=f_2 \lor(f_2 \land E(X(z)))$
+>In the case of the existential quantifier: $E((f_1)U(f_2))$ is the least fixpoint of the predicate transformer $\tau(z)=f_2 \lor(f_1 \land E(X(z)))$
 >
 
 We skip the proof.
@@ -665,19 +665,19 @@ We first create our function following [Lemma 23](Lemma%2023.md):
 $\tau(z)=q \lor (p \land (E(X(z))))$
 
 1. step
-$\tau(false)=q \land p \land E(X(\emptyset))=$
+$\tau(false)=q \lor p \land E(X(\emptyset))=$
 $=\{s_2\}\lor \{s_0,s_1\} \land \emptyset=\{s_2\}$
 
 2. step
-$\tau(\{s_2\})=q \land p \land E(X(\{s_2\}))=$
+$\tau(\{s_2\})=q \lor p \land E(X(\{s_2\}))=$
 $=\{s_2\}\lor \{s_0,s_1\} \land \{s_1,s_3\}=\{s_2,s_1\}$
 
 3. step
-$\tau(\{s_1,s_2\})=q \land p \land E(X(\{s_1,s_2\}))=$
+$\tau(\{s_1,s_2\})=q \lor p \land E(X(\{s_1,s_2\}))=$
 $=\{s_2\}\lor \{s_0,s_1\} \land \{s_0,s_1,s_2,s_3\}=\{s_0,s_1,s_2\}$
 
 4. step
-	$\tau(\{s_0,s_1,s_2\})=q \land p \land E(X(\{s_0,s_1,s_2\}))=$
+	$\tau(\{s_0,s_1,s_2\})=q \lor p \land E(X(\{s_0,s_1,s_2\}))=$
 	$=\{s_2\}\lor \{s_0,s_1\} \land \{s_0,s_1,s_2,s_3\}=\{s_0,s_1,s_2\}$
 We see that in the fourth step the resulting set stays the same i.e. we have found a [fix point](fix%20point.md).
 
@@ -685,7 +685,7 @@ We see that in the fourth step the resulting set stays the same i.e. we have fou
 We are now ready for symbolic model checking.
 # 3 Preliminary steps to [Symbolic model-checking](Symbolic%20model-checking.md): [QBF](QBF.md)
 
-[[QBF]] does not increase the [expressiveness](expressiveness) of boolean formulas, but it allows in many cases to write more [Succinct](Succinctness.md) formulas.
+[[QBF]] does not increase the [expressiveness](expressiveness.md) of boolean formulas, but it allows in many cases to write more [Succinct](Succinctness.md) formulas.
 
 
 What happens if we want to use [Shannon-Expansion](Shannon-Expansion.md) in [QBF](QBF.md)
@@ -703,7 +703,7 @@ This symbolic [Model-checking](Model-checking.md) algorithm called $CHECK$ takes
 # 4 CHECK
 $CHECK$ is inductively defined on the structure of the formula.
 
-- if $f$ is a [Propositional Letter](Propositional%20Logic) then $CHECK(f)$ returns the [OBDD](Ordered%20Binary%20Decision%20Diagramm.md) for such a letter.
+- if $f$ is a [Propositional Letter](Propositional%20Logic.md) then $CHECK(f)$ returns the [OBDD](Ordered%20Binary%20Decision%20Diagramm.md) for such a letter.
 - if $f$ is $f_1 \land f_2$ or $\neg f_1$, we just apply the algorithm $APPLY$ to the [OBDD](Ordered%20Binary%20Decision%20Diagramm.md) for $f_1$ and  $f_2$
 - The only complex case we have to consider  are the ones containing temporal modalities which are
 	- $\underbrace{E(X(f_1)),E((f_1)U(f_2))}_{existential}$ and $\underbrace{E(G(f_2)}_{universal}$

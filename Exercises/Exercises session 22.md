@@ -1,4 +1,4 @@
 Ex 1:
 Proof congruence and finite index of [[Lemma 12]].
 
-![[VV22exercise_1.jpeg]]
+![[Verification 22_image_7.jpeg]]

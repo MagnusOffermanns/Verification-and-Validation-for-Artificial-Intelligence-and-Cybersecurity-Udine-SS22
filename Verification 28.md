@@ -57,7 +57,11 @@ $$\exists x ((x\in Q_{a}\lor x\in Q_{c})\land \neg \exists y(x\lt y\land y\in Q_
 
 Therefore we can show that we can translate all signs from [Star-free Regular Expressions](Star-free%20Regular%20Expressions.md) into [S1SA](Monadic%20second%20order%20of%20one%20sucessor.md).
 
->![Note] Why is there a * in a star free expression: It represents the universe and could also be expressed as $\neg \emptyset$. What is not allowed is for instance $ab^*$
+>[!Note] Why is there a * in a star free expression?
+>
+>It represents the universe and could also be expressed as $\neg \emptyset$. What is not allowed is for instance $ab^*$
+
+
 
 The proof is by induction on the structure of the star-free expression.
 

@@ -28,11 +28,12 @@ The new added parts are setting the variable $p$ to the wanted value and with th
 
 The <mark style="background: #014E11F2;">time complexity</mark> is exponential as we have two recursive calls each $\exists$ or $\forall$. i.e. $O(|\phi|^{q\cdot d(\phi)})$ where $q$ is the number of quantifiers, and $d(\phi)$ is the quantifier depth.
 
-> [!note]
-> what is the quantifier depth?
+> [!note] [quantifier depth](quantifier%20depth.md)
+> what is the [[quantifier depth]]?
 > The number of consecutive quantifiers
 > $\exists p  \forall q \forall r$ would have the quantifier depth 3
 
+[Quantifier rank](Quantifier%20rank.md)
 Complexity: __PSPACE__-complete 
 
 # 1 [[Satisfiability]] in [[QBF]]
@@ -49,10 +50,10 @@ Complexity: __PSPACE__-complete
 Now we look at the difference of the satisfiability tree in [[QBF]] and [[SAT]] (propositional logic)
 
 Just has one path as there are only $\exists$ when looking at satisfiability
-![[Satisfiability_SAT.png|300]]
+![[Verification 4_image_1.png|300]]
 
 Has multiple paths as there are $\exists$ as well as $\forall$ which split up the tree
-![[Tree_satisfiability_QBF.png|300]]
+![[Verification 4_image_2.png|300]]
 
 > [!note] [[lemma 5]]
 > In [[QBF]] every formula is equivalent to one in [[Prenex Normal Form]] which can be computed efficiently
@@ -93,7 +94,7 @@ $$\phi_{reach}(\underline{p_1},....,\underline{p_n})=\phi_{init}(\underline{p_1}
 
 Now we sum up all $\phi_{step}$ to get from $\underline{p_{init}}$ to $\underline{p_{target}}$ as $\phi_{run}[p_{init},p_{target}]$.
 
-In the next step we split the path up into two paths from $p_init$ to $p_r$ and from $p_r$ to $p_target$ with about equal length $\frac{n}{2}$. Then we split this sub-path again up recursively till the path is equal to $\phi_{step}[\underline{p_k},\underline{p_{k+1}}]$ where k is some step in the path. 
+In the next step we split the path up into two paths from $p_{init}$ to $p_r$ and from $p_r$ to $p_{target}$ with about equal length $\frac{n}{2}$. Then we split this sub-path again up recursively till the path is equal to $\phi_{step}[\underline{p_k},\underline{p_{k+1}}]$ where k is some step in the path. 
 Mathematically written:
 $$\phi_{run}^{n}(\underline{p},\underline{q})=\exists r (\phi_{run}^{n/2}(\underline{p},\underline{r})\land \phi_{run}^{n/2}(\underline{r},\underline{q}))$$
 $$\phi_{run}^{n/2}(\underline{p},\underline{q})=\exists r (\phi_{run}^{n/4}(\underline{p},\underline{r})\land \phi_{run}^{n/4}(\underline{r},\underline{q}))$$
@@ -135,7 +136,7 @@ $$\phi =|\phi \land \phi|\phi \lor \phi|\neg\phi| \phi \iff \phi|\phi \implies \
 <mark style="background: #014E11F2;">semantics</mark> :
 A structure now consists of  a *universe* $U^s$ which is a set of objects
 + *interpretations* $R \implies R^S \subseteq U^S \times ... \times U^S$
-								$x \implies x^S \in U^S$ 
+$x \implies x^S \in U^S$ 
 What does this mean?
 The first $R$ is the Relationship symbol. $R^S$ is the real Relationship
 $x$ is a variable that is getting mapped on an object of the universe $x^s$.
@@ -216,7 +217,7 @@ $$
 when he <mark style="background: #FF5582A6;">runs</mark> 
 <mark style="background: #ADCCFFA6;">everybody</mark> <mark style="background: #FF5582A6;">runs</mark> 
 
-$$\phi() = \textcolor{green}{\exists} x (\textcolor{red}{R}(x) \implies \textcolor{blue}{\forall y} \textcolor{red}{R}(y))
+$$\phi() = \textcolor{green}{\exists} x (\textcolor{red}{R}(x) \implies \textcolor{blue}{\exists y} \textcolor{red}{R}(y))
 $$
 
 2 variables -> none of them free
@@ -250,7 +251,7 @@ $$\begin{equation}
 $$
 
 Then the formula is true for both:
-$$\phi() = \textcolor{green}{\exists} x (\textcolor{red}{R}(x) \implies \textcolor{blue}{\forall y} \textcolor{red}{R}(y))
+$$\phi() = \textcolor{green}{\exists} x (\textcolor{red}{R}(x) \implies \textcolor{blue}{\exists y} \textcolor{red}{R}(y))
 $$
  and
  $$\phi() = \textcolor{green}{\forall} x (\textcolor{red}{R}(x) \implies \textcolor{blue}{\forall y} \textcolor{red}{R}(y))
@@ -262,15 +263,15 @@ R is a function
 
 $\phi = \forall x \exists y R(x,y) \land (\forall z R(x,z) \implies z=y)$
 
-1. $\forall x \exists y R(x,y)$ means that the function is not a [[partial function]] i.e. for every $x \in X$ there is a $y \in Y$ that can be brought into relation.\
+1. $\forall x \exists y R(x,y)$ means that the function is not a [[partial function]] i.e. for every $x \in X$ there is a $y \in Y$ that can be brought into relation.
 2.  $(\forall z R(x,z) \implies z=y)$ means that there is a 1 to 1 relationship between the elements of $X$ and $Y$. It is not possible two relate two different objects y and z to the same x
 i.e.
 is allowed
-- R(x,b) -> k
-- R(x,n) -> m
+- $R(x,b) \to k$
+- $R(x,n) \to m$
 is not allowed
-- R(x,b) -> k
-- R(x,n) -> k
+- $R(x,b) \to k$
+- $R(x,n) \to k$
 
 This formula means that no tuples of elements from the source set X should not point to the same element  in the goal set and that all elements of X have a element with which it can be brought into relation.
 
@@ -281,7 +282,8 @@ $R(x)=...$ it means $R(x) = \forall x \exists y R(x,y) \land (\forall z R(x,z) \
 
 "$+$ is commutative" $$\phi = \forall x \forall y (x+y=y+x)$$
 
-Learnings $x$ is a three way relation (ternary operation) two inputs x,y point to one output z. One could write this relation also differently
+> [!Note] Learning:
+> $x$ is a three way relation (ternary operation) two inputs x,y point to one output z. One could write this relation also differently
 
 $$\forall x \forall y \forall z \forall z' (+(x,y,z) \land +(x,y,z')) \implies z=z'$$
 
@@ -330,7 +332,7 @@ $$
 
 > [!note]
 > uniform continuous $\implies$ continuous
-> Example: \frac{1}{x} is continuous but not uniformly continuous in $\mathbb{R}$
+> Example: $\frac{1}{x}$ is continuous but not uniformly continuous in $\mathbb{R}$
 
 Here we got some exercises [[Exercises session 4]]
 

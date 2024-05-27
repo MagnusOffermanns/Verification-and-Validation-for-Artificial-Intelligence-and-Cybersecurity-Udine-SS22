@@ -186,7 +186,7 @@ In [CTL](temporal%20logic.md) we need to alternate between State and path quanti
 We need these two statements to define [Justice](Justice.md) and [Compassion](Compassion.md). For the solution of this problems see [Verification 30](Verification%2030.md) and [Exercises session 30](Exercises%20session%2030.md).
 
 >[!Note]
->In terms of [expressiveness](expressiveness) [CTL](temporal%20logic.md) and [LTL](temporal%20logic.md) are incomparable. There are things that the one can do and the other one not, an vice versa.
+>In terms of [expressiveness](expressiveness.md) [CTL](temporal%20logic.md) and [LTL](temporal%20logic.md) are incomparable. There are things that the one can do and the other one not, an vice versa.
 
 ==Exercise 6==
 An example of a [CTL*](temporal%20logic.md) formula

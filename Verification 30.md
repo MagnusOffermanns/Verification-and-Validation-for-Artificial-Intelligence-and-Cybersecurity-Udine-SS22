@@ -1,7 +1,7 @@
 Notes about special cases of the $Until$ modality $U$:
 - ==Special case 1== strong Until: $(p)U^{\exists}(q)$
 	Means that that there must at some point in the future $q$ must go True. If not the result is $False$
-- ==Special case 2==: non-strict Until: $(p)U_{\ge}q$
+- ==Special case 2==: non-strict Until: $(p)U_{\ge}(q)$
 	Means that $q$ can also come true at time $t$. That means that $q$ and $p$ can be true at time $t$ then after this the values of $p$ and $q$ do not have an influene on the result of $U_{\ge}$. Summarized in natural language: Now is part of the future.
 
 The $U$ we are using is the combination of both i.e. $U^{\exists}_{\ge}$.
@@ -26,7 +26,12 @@ To fullfill $G(F(p))$ we have to consider these steps:
 A visualization fo this statement is the image below:
 ![](Verification%2030_image_2.png)
 
-Exercise: Expressing [Compassion](Compassion.md) in [PLTL](temporal%20logic.md).
+>[!Exercise] Expressing [Compassion](Compassion.md) in [PLTL](temporal%20logic.md).
+>$p$: the state is enabled
+>$q$: the state is taken
+>$G(F(p)) \land F(q)$
+>- $G(F(p))$ is only true if $p$ is infinitely many times in the future
+>- $F(q)$ is only true if $q$ is true at some point in the future
 
 
 #### 0.1.1.2 P before Q
@@ -158,7 +163,7 @@ We can redefine the modalities
 - $G^-(q)$ at some point in the past q is always negative 
 
 >[!Note]
->If we add the past [PLTL](temporal%20logic.md) does not get more [expressive](expressiveness), but we gain [Succinctness](Succinctness.md) we can write it with much less characters.
+>If we add the past [PLTL](temporal%20logic.md) does not get more [expressive](expressiveness.md), but we gain [Succinctness](Succinctness.md) we can write it with much less characters.
 
 # 2 A [Tableaux](Tableaux.md) based decision procedure for [LTL](temporal%20logic.md)
 

@@ -1,7 +1,7 @@
 # 1 The transitions
 ## 1.1 The Grouped composite instructions $<S>$
 
-We want to make instruction that are not [atomic](atomic.md), execute in a single step, i.e. make them atomic. We need to figure out what the influence of all the instructions on the variables are but not the control variable i.e. $Y$. Kind of like the return value of a function of instructions 
+We want to make instruction that are not [atomic](atomic.md), execute in a single step, i.e. make them atomic. We need to figure out what the influence of all the instructions on the variables are but not the control variable i.e. $\pi$. Kind of like the return value of a function of instructions 
 
 To more easily refer to this change of variables of $Y$ we define the [[relation of data transformations]] $\delta[S]$ which are all the changes of the variables of $Y$ not including $\pi$.
 

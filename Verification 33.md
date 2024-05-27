@@ -135,7 +135,7 @@ When we use branching [LTL](temporal%20logic.md) we write it as $M$ satisfies $A
 ## 1.4 [Model-checking](Model-checking.md) in [LTL](temporal%20logic.md)
 First [Model-checking](Model-checking.md) algorithm was introduced by Vardi and Wolper.
 
-Given the structure  $(M, s)$ and the [LTL](temporal%20logic.md) formula $phi$, construct a Büchi automaton $A$ which accepts those paths $\Pi=s,s_1,s_2$ through $M$  which violate $\phi$
+Given the structure  $(M, s)$ and the [LTL](temporal%20logic.md) formula $\phi$, instruct a Büchi automaton $A$ which accepts those paths $\Pi=s,s_1,s_2$ through $M$  which violate $\phi$
 $$A=A_{(M,s)} \times A_{\neg \phi}$$
 
 We check for non-emptiness of the Language of A i.e.  $L(A)$ where $L(A)$ is the set of bug scenarios.
@@ -170,13 +170,13 @@ The algorithm for solving the P-satisfiability of $\varphi$, makes use of the [T
 - $state(A):$ For each [Atom](Atom.md) $A$, let $state(A)$ be the conjunction of all [local formulas](local%20formula.md) in $A$ (by $R_{sat}$ , $state(A)$ must be [satisfiable](Satisfiability.md)).
 
 - [consistent](VV%20consistent.md): Atom $A$ is [consistent](VV%20consistent.md) with state $s$ if $s \models state(A)$, that is, all state-formulas in $A$ are [satisfiable](Satisfiability.md) by $s$.
-	Example: Lets suppose the onlh [local formula](local%20formula.md) in an Atom is the proposition letter $p$, we say that a certain state $s$ is [consistent](VV%20consistent.md) with an [Atom](Atom.md). When the state $s$ makes all local formulas $True$ . In our case this is only the formula $p$.
+	Example: Lets suppose the only [local formula](local%20formula.md) in an Atom is the proposition letter $p$, we say that a certain state $s$ is [consistent](VV%20consistent.md) with an [Atom](Atom.md). When the state $s$ makes all local formulas $True$ . In our case this is only the formula $p$.
 
 - [trail](trail.md): Let $\pi: A_1,A_2,\dots$ be a path in $T_\varphi$ and let $\sigma: s_0,s_1,s_2,\dots$ be a computation of $P$. $\theta$ is a [[trail]] of $T_\varphi$ over $\sigma$ if $A_j$ is [consistent](VV%20consistent.md) with $s_j$ , for all $j \ge 0$.
 
 - $\sigma(A):$ For each atom $A \in T_\varphi$ , $\delta(A)$  denotes the set of successors of $A$ in $T_\varphi$ .
 
-Example for $A_3$ in the [Tableaux](Tableaux.md) below $\sigma(A_3)=\{A_3,A_2,A_0,A_4,A_6\}$
+Example for $A_3$ in the [Tableaux](Tableaux.md) below $\sigma(A_2)=\{A_3,A_2,A_0,A_4,A_6\}$
 
 ![](Verification%2033_image_1.png)
 

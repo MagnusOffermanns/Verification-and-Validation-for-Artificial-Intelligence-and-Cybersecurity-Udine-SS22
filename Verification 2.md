@@ -50,9 +50,9 @@ A language has three properties:
 
 1. [[vocabulary]] -> The symbols that can be used
 
-2. [[Syntax]] -> grammar how to combine them so that something has meaning
+2. [Syntax](Syntax.md) -> grammar how to combine them so that something has meaning
 
-3. [[semantics]] -> meaning of formulas
+3. [semantics](semantics.md) -> meaning of formulas
 
 Example:
 Q: Are you two married
@@ -68,7 +68,7 @@ If all <mark style="background: #014E11F2;">humans</mark> are <mark style="backg
 then <mark style="background: #ADCCFFA6;">Socrates</mark> is <mark style="background: #FF5582A6;">mortal</mark> .
 $((\forall x A(x)\rightarrow B(x)) \wedge A(y_0)) \rightarrow B(y_0)$
 
-The above formular is valid (i.e. true in every structure/interpretation). We call this a [[Tautology]]
+The above formular is valid (i.e. true in every  structure/interpretation). We call this a [[Tautology]]
 
 ---
 
@@ -82,6 +82,7 @@ $\exists x \forall y(C(x,y) \iff \neg C(y,y))$
 
 The formula is unsatisfiable (false in every structure/interpretation).
 We call it a [[contradiction]]
+
 ---
 Every <mark style="background: #014E11F2;">incoming</mark> order is <mark style="background: #FF5582A6;">eventually</mark> <mark style="background: #ADCCFFA6;">processed</mark> 
 
@@ -130,7 +131,7 @@ What is [[complexity]]?
 Alg is Time/Space bounded by some function $O(f)$ $f: N \rightarrow N$
 if Alg(input) uses <= $c \cdot f(|input|)+d$ units of time/space for some coefficients c,d
 
-What is [[expressiveness]]
+What is [expressiveness](expressiveness.md) 
 It is a competition Expressiveness vs Decidability
 Which properties can be expressed in a given logic?
 Is this logic more or less expressive than another logic?

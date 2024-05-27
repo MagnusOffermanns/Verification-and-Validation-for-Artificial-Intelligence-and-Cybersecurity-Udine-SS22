@@ -2,7 +2,7 @@
 # 1 Examples for the [[Hankel matrices]]
 ## 1.1 Standard automata
 
-![[Hankel example 2.png]]
+![[Verification 15_image_1.png]]
 
 The resulting [[Deterministic Finite State Automata|Automaton]] is the correct one.
 
@@ -14,7 +14,7 @@ For instance a function $f$ that maps words from one [[Alphabet]] to another i.e
 A function is a [[Deterministic Finite State Automata|Automaton]] with output. The simplest one is the [[Sequential Transducer]]
 
  
-![[sequential transducer.png]]
+![[Verification 15_image_2.png]]
 
 The example in the upper part of the slide is an example for the automaton in the lower part of the slide and is a [[Sequential Transducer]]. It can exchange a input word $w$ for instance $w=a$ by another word $w'$ for instance $w'=ac$.
 
@@ -22,15 +22,13 @@ The notation in the painting $a/ac$ means that for every $a$ read in at that sta
 
 [[Sequential Transducer]]s are quite weak they can only compute total, [[monotone functions]]. i.e.
 
-> [!note]
-> 
-> title: monotone functions
+> [!note] monotone functions
 > $f$ is [[monotone functions|monotone]] if every word $w$ read in by the [[Deterministic Finite State Automata|Automaton]] is a [[prefix]] of the output word $w'$
 
 ## 2.1 How does the learning algorithm for [[monotone functions]] work?
 
 It is very similar to the normal learning game.
-![[function learning game.png]]
+![[Verification 15_image_3.png]]
 
 Now we need to find something similar to the [[Theorem 6|Myhill-Nerode equivalence]] for learning for functions. The old one only works on [[Deterministic Finite State Automata|Automata]] not on functions.
 
@@ -66,7 +64,7 @@ $u \approx_{f_0} v \text { if } \forall t \in \sum^* \quad f_0(u t)-f_0(u)=f_0(v
 
 Lets look at an example:
 
-![[Example function myhill-nerode.png]]
+![[Verification 15_image_4.png]]
 
 There are two classes $[\epsilon_{\approx_{f_{0}}}]$ containing all even length words and $[a_{\approx_{f_{0}}}]$ containing all odd number words.
 
@@ -88,14 +86,14 @@ The name of a equivalence class is created by concatenating the words of each fi
 
 For instance in the first row if our test words would be $T=\{\epsilon, b,aa\}$ the class name would be: $\epsilon baac$
 
-![[example Hankel matrix functions.png]]
+![[Verification 15_image_5.png]]
 
 Now we do a new example:
 Example:
 
-![[example Hankel matrix functions_2.png]]
+![[Verification 15_image_6.png]]
 
-![[example Hankel matrix functions_3.png]]
+![[Verification 15_image_7.png]]
 
 
 Counterexample is $w=ab$ but we also need to add the suffix which is $w=b$

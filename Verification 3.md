@@ -81,7 +81,7 @@ What is the complexity of this algorithm is polynomial:
 size of the formula -> number of rows of the [[syntactic tree]] 
 times the size of the structure -> polynomial
 
-==Name== EVAL and is p-complete
+==Name== $EVAL$ and is p-complete
 
 # 4 [[Satisfiability]]
 Short name: ==SAT==
@@ -103,7 +103,7 @@ The complexity is exponential time because you have to try every possible config
 
 One can guess the inputs $vx$ to make it non-deterministic. Then the complexity is not exponential.
 
-#[[Validity]]
+# 5 [[Validity]]
 We look if the formula $\phi$ is valid in all Structures $S$
 ```python
 def Valid(phi):
@@ -122,7 +122,7 @@ The complexity is exponential time because you have to try every possible config
 One can guess the inputs $vx$ to make it non deterministic.
 
 
-# 5 Economy of Syntax
+# 6 Economy of Syntax
 [[Lemma 1]]:
 Every formula is equivalent to one without $\iff$ and $\implies$
 
@@ -149,7 +149,7 @@ proof: exercise
 [[Corollary 1]]:
 CNF-SAT is NP-complete
 
-# 6 [[Tableaux]]
+# 7 [[Tableaux]]
 We want to check [[Satisfiability]]
 Motto:instead of guessing the structure we guess pieces of the formula that are easy to satisfy.
 
@@ -178,7 +178,7 @@ for each leave that is not _unblocked_:
 	The formula is __valid__ if no branch contains a contradiction
 	
 	
-## 6.1 Example/ Application:
+## 7.1 Example/ Application:
 Consider a device whose internal state is encoded by $k$ bits $\underline{p}=p_1,...,p_n$
 - initial state is described by a propositional formula $\phi_{init}(\underline{p})$
 - target state is described by a propositional formula $\phi_{target}(\underline{p})$
@@ -195,7 +195,7 @@ $$\phi_{reach}(\underline{p_1},....,\underline{p_n})=\phi_{init}(\underline{p_1}
 If this formula is [[validity satifiability|satisfiable]] there is a way from _init_ to _target_
 
 
-# 7 [[QBF]] Quantified Boolean Formulas
+# 8 [[QBF]] Quantified Boolean Formulas
 <mark style="background: #014E11F2;">Vocabulary:</mark> 
 - Boolean variables $\sum = \{p,q,r...\}$
 - Boolean connectives $\land,\lor,\neg,\iff,\implies$
@@ -253,6 +253,6 @@ When we write $\phi [p/\alpha]$ we only replace the <mark style="background: #01
 i.e:
 $\phi= \neg \alpha \lor \exists p (p \land q)$
 
-```ad-note
-title:[[Lemma 4 (renaming)]]
-$\exists p \phi$ is equivalent to $\exists q \phi[p/q]$ if q does not appear ==free== in $\phi$
+
+>[!note] [[Lemma 4 (renaming)]]
+>$\exists p \phi$ is equivalent to $\exists q \phi[p/q]$ if q does not appear ==free== in $\phi$

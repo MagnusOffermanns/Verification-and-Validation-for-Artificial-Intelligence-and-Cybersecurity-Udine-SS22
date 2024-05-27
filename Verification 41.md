@@ -1,7 +1,7 @@
 We are now ready for symbolic model checking.
 # 1 Preliminary steps to [Symbolic model-checking](Symbolic%20model-checking.md): [QBF](QBF.md)
 
-[[QBF]] does not increase the [expressiveness](expressiveness) of boolean formulas, but it allows in many cases to write more [Succinct](Succinctness.md) formulas.
+[[QBF]] does not increase the [expressiveness](expressiveness.md) of boolean formulas, but it allows in many cases to write more [Succinct](Succinctness.md) formulas.
 
 
 What happens if we want to use [Shannon-Expansion](Shannon-Expansion.md) in [QBF](QBF.md)
@@ -19,7 +19,7 @@ This symbolic [Model-checking](Model-checking.md) algorithm called $CHECK$ takes
 # 2 CHECK
 $CHECK$ is inductively defined on the structure of the formula.
 
-- if $f$ is a [Propositional Letter](Propositional%20Logic) then $CHECK(f)$ returns the [OBDD](Ordered%20Binary%20Decision%20Diagramm.md) for such a letter.
+- if $f$ is a [Propositional Letter](Propositional%20Logic.md) then $CHECK(f)$ returns the [OBDD](Ordered%20Binary%20Decision%20Diagramm.md) for such a letter.
 - if $f$ is $f_1 \land f_2$ or $\neg f_1$, we just apply the algorithm $APPLY$ to the [OBDD](Ordered%20Binary%20Decision%20Diagramm.md) for $f_1$ and  $f_2$
 - The only complex case we have to consider  are the ones containing temporal modalities which are
 	- $\underbrace{E(X(f_1)),E((f_1)U(f_2))}_{existential}$ and $\underbrace{E(G(f_2)}_{universal}$

@@ -3,6 +3,7 @@ aliases:
   - Situated plans
   - Universal plans
   - Conformant Plans
+  - Deterministic Plan
 ---
 [Situated plans](Plans.md)
 	The evolution of the plan may be influenced by the environment. Environmental parameters are repeatedly measured, and the selection of the action to execute takes into account such measurements (**trial and error strategies**). One can get stuck in a state and might need to backtrack
@@ -12,3 +13,5 @@ aliases:
 
 - [Conformant Plans](Plans.md)
 	In conformant plans, there is no need to collect any piece of information during the execution of the plan in order to achieve the goal. They are useful when observations of the environment are not possible (**null observability**).
+- Deterministic plan
+	**Deterministic plans**: for each $s \in S$, there is at most one pair $(s, a) \in SA$. 

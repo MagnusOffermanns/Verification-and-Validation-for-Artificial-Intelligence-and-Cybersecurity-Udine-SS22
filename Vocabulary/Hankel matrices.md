@@ -1,7 +1,7 @@
 infinite matrix representing a Language $L_0$. it is highly redundant.
 
 
-![[Hankel-Matrix 1.png]]
+![[Verification 14_image_3.png]]
 
 Works also for [[Non Deterministic Finite State Atomata|NFA]] instead of the 1's or 0's one puts in probabilities.
 

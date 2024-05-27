@@ -7,8 +7,8 @@ number headings: auto, first-level 1, max 6, 1.1
 - [[FO - First order logic]] is powerful and expressive 
 - Model-checking is decidable (in [[PSPACE]]) when the universe is finite.
 - [[Satisfiability]],[[Validity]],[[logical equivalence]] are all undecidable (proven a by the [[Turing machine]] to [[Domino-Problem]] reduction)
-- For infinite universes one ca fix a model and study its [[FO-theories|FO-Theory]]. Some [[FO-theories]] are decidable some not.
-- Some [[FO-theories]] can be compared to other [[FO-theories]] using [[Logical reduction]]
+- For infinite universes one ca fix a model and study its [FO-Theories](Theory.md). Some [[FO-theories]] are decidable some not.
+- Some [FO-Theories](Theory.md) can be compared to other [FO-Theories](Theory.md) using [[Logical reduction]]
 
 # 2 Games in Logic 
 Goal: check which properties/ languages are *definable* in logic (for instance [[FO - First order logic]])
@@ -177,19 +177,18 @@ We have a [[Definability]] problem and we express a property in [[Monadic second
 > $P: \text{ property (i.e. a set of structures)}$
 > $S: Structure$
 > $\phi: \text{FO formula}$
->  ```
->  
-> 1. $P$ __is [[Definability|defined by]]__ $\phi$ if for every $S$ $S \in P \iff S \models \phi$
-> 
-> ### 2.2.2 [[elementary equivalence]] 
-> 1. $S,S'$ [[elementary equivalence|elementary equivalent]] if for every $\phi$:  $S\models \phi \iff S'\models \phi$
-> 
-> [[elementary equivalence]] is probably called [[elementary equivalence]] because [[FO - First order logic]] was previously called elementary logic.
-> ad-note
-title: [[Lemma 9]]
-If there are two structure $S,S'$ such that:
-$S \in P$ and $S\notin P$ and $S$ and $S'$ are [[elementary equivalence|elementary equivalent]] then $\text{\textcolor{red}{P is not definable in First order logic}}$
-```
+
+ 1. $P$ __is [[Definability|defined by]]__ $\phi$ if for every $S$ $S \in P \iff S \models \phi$
+
+### 2.2.2 [[elementary equivalence]] 
+ 1. $S,S'$ [[elementary equivalence|elementary equivalent]] if for every $\phi$:  $S\models \phi \iff S'\models \phi$
+
+ [[elementary equivalence]] is probably called [[elementary equivalence]] because [[FO - First order logic]] was previously called elementary logic.
+
+>[!Note] [[Lemma 9]]
+>If there are two structure $S,S'$ such that:
+>$S \in P$ and $S\notin P$ and $S$ and $S'$ are [[elementary equivalence|elementary equivalent]] then $\text{\textcolor{red}{P is not definable in First order logic}}$
+
 
 ==Proof through contradiction==:
 We have $S,S'$ that are [[elementary equivalence|elementary equivalent]] and $S \in P$ and $S\notin P$.
@@ -244,9 +243,9 @@ We want to construct a game $G_{S,S'}$ whose winner determines weather S and S' 
 ## 2.3 The [[Ehrenfeucht-Fraise game|Ehrenfeucht-Fraise Games]]
 ==Players:==
 - <mark style="background: #014E11F2;">Duplicator</mark> :
-> Goal: Wants to prove that $S'$ and $S$ are [[n-equivalence|n-equivalent]]. 
+	Goal: Wants to prove that $S'$ and $S$ are [[n-equivalence|n-equivalent]]. 
 - <mark style="background: #FF5582A6;">Spoiler</mark> :
-> Goal: Want to disprove that $S'$ and $S$ are [[n-equivalence|n-equivalent]]
+	Goal: Want to disprove that $S'$ and $S$ are [[n-equivalence|n-equivalent]]
 
 
 
@@ -267,15 +266,15 @@ The <mark style="background: #014E11F2;">duplicator</mark> wins if after n turns
 ### 2.3.1 Example 1
 ==Board:==
 Two Graphs $S$ and $S'$:
-![[Playingfield Ehrenfeucht Fraisse.png|500]]
+![[Verification 7_image_1.png|500]]
 
 ==First turn:==
 The Spoiler chooses a node in $S'$
-![[Playingfield Ehrenfeucht Fraisse_1.png|500]]
+![[Verification 7_image_2.png|500]]
 
 And the duplicator responds. In this stage of the game he can choose any node. He can't loose. But in this example he chooses the one in the upper left corner node in $S$ because it is similar to the choice of the Spoiler.
 
-![[Playingfield Ehrenfeucht Fraisse_2.png|500]]
+![[Verification 7_image_3.png|500]]
 
 The result of this round is that both sets have a single isolated node in them. They are  still isomorphic.
 
@@ -283,17 +282,17 @@ The result of this round is that both sets have a single isolated node in them. 
 
 Now the duplicator chooses another node that is isolated. There are still no nodes that have no connections (edge).
 
-![[Playingfield Ehrenfeucht Fraisse_3.png|500]]
+![[Verification 7_image_4.png|500]]
 
  The challenge for the <mark style="background: #014E11F2;">duplicator</mark> is now to find a node that is also isolated. And he finds one by the node in the lower left corner.
  
- ![[Playingfield Ehrenfeucht Fraisse_4.png|500]]
+ ![[Verification 7_image_5.png|500]]
  
  ==Third turn:==
  
  The <mark style="background: #FF5582A6;">Spoiler</mark> chooses now a third node that is isolated!
  
- ![[Playingfield Ehrenfeucht Fraisse_5.png|500]]
+ ![[Verification 7_image_6.png|500]]
  
  But here the<mark style="background: #014E11F2;"> duplicator </mark> can not respond anymore independent of the choice he does he can not choose a third node that is isolated! ==He loses after two turns!==
  
@@ -304,7 +303,7 @@ Now the duplicator chooses another node that is isolated. There are still no nod
 ### 2.3.2 Example 2
 ==Board:==
 Two Graphs $S$ and $S'$:
-![[Playingfield Ehrenfeucht Fraisse_6.png|500]]
+![[Verification 7_image_7.png|500]]
 
 ==Questions to ask:==
 - Can the Duplicator survive n rounds e.g. 3 rounds?
@@ -313,20 +312,20 @@ Two Graphs $S$ and $S'$:
 
 ==Turn 1===
 The spoiler chooses one element in $S$:
-![[Playingfield Ehrenfeucht Fraisse_7.png|700]]
+![[Verification 7_image_8.png|700]]
  And the Duplicator has plenty of choice and responds:
-![[Playingfield Ehrenfeucht Fraisse_8.png|700]]
+![[Verification 7_image_9.png|700]]
 
 ==Turn 2== 
 The spoiler chooses to adjacent elements in $S$
-![[Selection_134.png|700]]
+![[Verification 7_image_10.png|700]]
 
 The duplicator chooses another element in $S'$.
-![[Selection_135.png|700]]
+![[Verification 7_image_11.png|700]]
 
 ==Turn 3==
 Now the spoiler chooses a node not in $S$ but in $S'$ he can also do that between the two elements that the Duplicator choose. This is possible due to the nature of $\mathbb{R}$ where there are always an infinite amount of elements between two elements. And with this he caught the Duplicator in a trap.
-![[Selection_136.png|700]]
+![[Verification 7_image_12.png|700]]
 
 The duplicator can not choose a element between the previous chosen two elements of the Spoiler and hereby he loses.
 

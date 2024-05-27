@@ -1,0 +1,1 @@
+![](Hybrid%20system_image_1.png)

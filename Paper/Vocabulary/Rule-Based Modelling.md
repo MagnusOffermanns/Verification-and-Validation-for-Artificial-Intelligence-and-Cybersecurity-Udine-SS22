@@ -1,0 +1,1 @@
+![](Rule-Based%20Modelling_image_1.png)

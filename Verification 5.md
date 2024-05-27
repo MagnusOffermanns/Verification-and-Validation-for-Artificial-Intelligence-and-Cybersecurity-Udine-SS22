@@ -29,7 +29,9 @@ __PSPACE__-complete
 Theorem (Trakhtenbrot 50') Satisfiability of [[FO - First order logic]] is undecidable
 __Proof__: by **reduction** from **Domino** to [[FO - First order logic]] 
 
-<mark style="background: #014E11F2;">Idea:</mark> first we show that the **Halting-problem** is easier than **Domino** and  **Domino** is easier that [[FO - First order logic|FO]] [[Satisfiability]]. Then we show that Satisfiability is undecidable in the **Halting-problem** from there follows that also in **Domino**  and [[FO - First order logic|FO]] Satisfiability is undecidable.
+
+
+<mark style="background: #014E11F2;">Idea:</mark> first we show that the  **Halting-problem** is easier than **Domino** and  **Domino** is easier that [[FO - First order logic|FO]] [[Satisfiability]]. Then we show that Satisfiability is undecidable in the **Halting-problem** from there follows that also in **Domino**  and [[FO - First order logic|FO]] Satisfiability is undecidable.
 
 [[reduction]]:
 An algorithm F that solves Domino using an oracle that returns solutions to FO-Satisfiability
@@ -38,11 +40,11 @@ An algorithm F that solves Domino using an oracle that returns solutions to FO-S
 Also known as tiling problem
 <mark style="background: #014E11F2;">input:</mark> 
 finite set of 4-sided dominos:
-![[4_sided_dominos.png|300]]
+![[Verification 5_image_1.png|300]]
 The dominos can either have fields with numbers (dominos with the same number can be connected) or a white field that is used for the border of the rectangle we want to lay.
 
 <mark style="background: #014E11F2;">Goal:</mark> to lay a complete rectangle without holes with the dominos of any size with a __white border__
-![[Domino_rectangle.png|300]]
+![[Verification 5_image_2.png|300]]
 
 <mark style="background: #014E11F2;">Special rules:</mark> 
 - one does not need to use all the dominos of the set
@@ -73,22 +75,22 @@ The dot means that the tile represents a writable cell. If there is a white fiel
 
 What do the tiles mean:
 - The head is else where the tiles are copied into the next like this into the next row.
-![[turing2domino1.png|300]]
+![[Verification 5_image_3.png|300]]
 
 - The read/write head is over the left tile. The state of the square of tape is changed from $a$ to $b$ and the read/write head is moved to the right. The state changes from blue ($q_0$) to green($q_1$)
-![[turing2domino2.png|300]]
+![[Verification 5_image_4.png|300]]
 
 - The read/write head is over the right tile. The state of the square of tape is changed from $a$ to $b$ and the read/write head is moved to the left. The state changes from green ($q_1$) to blue ($q_0$).
-![[turing2domino3.png|300]]
+![[Verification 5_image_5.png|300]]
 
 - Initial state
-![[turing2domino4.png|300]]
+![[Verification 5_image_6.png|300]]
 
 - halting state
-![[turing2domino5.png|300]]
+![[Verification 5_image_7.png|300]]
 
 A full [[Turing machine]] reduction looks then like this: 
-![[turing2domino6.png|300]]
+![[Verification 5_image_8.png|300]]
 
 After converting from [[Turing machine]] to [[Domino-Problem]] we now need to transform the Domino problem to A [[FO - First order logic]] formula.
 
@@ -120,7 +122,7 @@ $$\forall x,y,z \quad (H(x,y)\land V(x,z)) \implies \exists w \quad (H(z,w) \lan
 
 Meaning: If there is a tile at the position $x$ and a tile $z$ above it and a tile $y$ to the right of it. There must be another tile $w$ that is to the right of $z$ and above $y$
 
-![[domino2fo3.png|200]]
+![[Verification 5_image_9.png|200]]
 
 2.  *$\phi_2=$There is exactly one domino at each node*
 For every domino $d$ we have a relation $N_d$ describing its position for which holds
@@ -161,39 +163,40 @@ __meaning__: For each domino it is not possible that it lies at two positions $N
 	 
 	 # Recap:
 	 
-	 |                         | [[Propositional Logic]] | [[QBF]]    | [[FO - First order logic]] |
-	 | ----------------------- | ----------------------- | ---------- | -------------------------- |
-	 | [[Model-checking]]      | **P**                   | [[PSPACE]] | [[PSPACE]]                 |
-	 | [[Satisfiability]]      | **NP**                  | [[PSPACE]] | Undecidable                |
-	 | [[Validity]]            | **coNP**                | [[PSPACE]] | Undecidable                |
-	 | [[logical equivalence]] | **coNP**                | [[PSPACE]] | undecidable                |
+|     |                         | [Propositional Logic](Propositional%20Logic.md) | [QBF](QBF.md) | [FO - First order logic](FO%20-%20First%20order%20logic.md) |
+| --- | ----------------------- | ----------------------------------------------- | ------------- | ----------------------------------------------------------- |
+|     | [[Model-checking]]      | **P**                                           | [[PSPACE]]    | [[PSPACE]]                                                  |
+|     | [[Satisfiability]]      | **NP**                                          | [[PSPACE]]    | Undecidable                                                 |
+|     | [[Validity]]            | **coNP**                                        | [[PSPACE]]    | Undecidable                                                 |
+|     | [[logical equivalence]] | **coNP**                                        | [[PSPACE]]    | undecidable                                                 |
 	 
-	 ```ad-note
-	 title: Why does the Undecidability  of [[Satisfiability]] imply that [[Validity]] is Undecidable.
-	 [[Validity]] can be reduced to [[Satisfiability]] i.e.
-	 
-	 [[Satisfiability]] has this definition $\exists S \quad S \models \phi$
-	 [[Validity]]	has this definition $\forall S \quad S \models \phi$
-	  
-	  $\forall S \quad S \models \phi$ is logically equivalent to:
-	  	meaning: all S model $\phi$
-	  $\forall S \quad S \not\models \neg\phi$ which is logically equivalent to:
-	  	meaning: All S don't models $\neg \phi$ 
-	  $\neg(\exists S \quad S \models \neg \phi)$ which is a satisfiability problem
-	  meaning: There does not exist a single S that models $\neg \phi$
-	 ```
-	 
-	 ```ad-note 
-	 title: why is equivalence also undecidable?
-	 We can reduce it from [[Validity]]
-	 We have two formulas $\phi_1$ and $\phi_2$
-	 then we define a formula $\phi_3=\phi_1 \iff \phi_2$
-	 Then we do a validity check on $\phi_3$
-	 $\forall S \quad S \models \phi_3$
-	 Therefore as Validity is undecidable also [[logical equivalence]] is undecidable.
-	``` 
-	
-# 4 [[FO-theories]]
+
+
+ >[!Note] Why does the Undecidability  of [[Satisfiability]] imply that [[Validity]] is Undecidable.
+	 >
+>[[Validity]] can be reduced to [[Satisfiability]] i.e.
+>
+>[[Satisfiability]] has this definition $\exists S \quad S \models \phi$
+>	 [[Validity]]	has this definition $\forall S \quad S \models \phi$
+>  
+>$\forall S \quad S \models \phi$ is logically equivalent to:
+ 	meaning: all S model $\phi$
+>$\forall S \quad S \not\models \neg\phi$ which is logically equivalent to:
+>	meaning: All S don't models $\neg \phi$ 
+ >$\neg(\exists S \quad S \models \neg \phi)$ which is a satisfiability problem
+>meaning: There does not exist a single S that models $\neg \phi$
+
+ 
+>[!Note] why is equivalence also undecidable?
+> We can reduce it from [[Validity]]
+>We have two formulas $\phi_1$ and $\phi_2$
+>then we define a formula $\phi_3=\phi_1 \iff \phi_2$
+> Then we do a validity check on $\phi_3$
+> $\forall S \quad S \models \phi_3$
+> Therefore as Validity is undecidable also [[logical equivalence]] is undecidable.
+
+[Theory](Theory.md)
+# 4 [FO-Theories](Theory.md)
 Change of perspective:
 <mark style="background: #014E11F2;">Before:</mark> we were given a formula and had to check if it holds on a structure.
 <mark style="background: #014E11F2;">Now</mark> : We have a given structure what are the formulas that hold on that Structure
@@ -211,7 +214,7 @@ $x^S,...=$ definition of free variables
 Usecase: is the structure with which one describes discrete,linear time.
 Contains the formulas: 
 $$\exists x (x=x)$$
-meaning: tautology, maybe there is equality?
+meaning: tautology, defines the meaning of $=$
 $$\forall x \exists y (x<y)$$
 meaning: There follows a y after every x. Way to define infinity
 $$\exists y \forall x \neg(x < y)$$

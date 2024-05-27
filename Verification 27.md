@@ -43,7 +43,7 @@ As we found a language that can be expressed by a [DBA](Buechi%20automata.md) bu
 ![](Verification%2027_image_3.png)
 
 
-Thats shit. So we try to find automata that are actually closed to [Complementation](Complementation.md), as complementation as the computation costs for complementation is so low and we want to do it regularly.
+Thats not cool. So we try to find automata that are actually closed to [Complementation](Complementation.md), as costs for complementation are so low and we want to do it regularly.
 
 Therefore people came up with [[Muller Automata]].
 
@@ -278,7 +278,7 @@ Then we remember that languages of the form $\overrightarrow{u}$ for $u$ being r
 
 # 5 The relationship between [S1S](Monadic%20second%20order%20of%20one%20sucessor.md) and [WS1S](Monadic%20second%20order%20of%20one%20sucessor.md)
 >[!Theorem] [[Theorem 20]]: the expressiveness of [WS1S](Monadic%20second%20order%20of%20one%20sucessor.md).
->An $\omega\text{-language}$ $L \subseteq A^\omega$ is  $\omega\text{-regular}$ (definable in [S1S](Monadic%20second%20order%20of%20one%20sucessor.md)) if and only if ($\iff$) $L$ is definable in [WS1S](Monadic%20second%20order%20of%20one%20sucessor.md) meaning that ==[S1S](Monadic%20second%20order%20of%20one%20sucessor.md) and [WS1S](Monadic%20second%20order%20of%20one%20sucessor.md) are equally [expressive](expressiveness)==
+>An $\omega\text{-language}$ $L \subseteq A^\omega$ is  $\omega\text{-regular}$ (definable in [S1S](Monadic%20second%20order%20of%20one%20sucessor.md)) if and only if ($\iff$) $L$ is definable in [WS1S](Monadic%20second%20order%20of%20one%20sucessor.md) meaning that ==[S1S](Monadic%20second%20order%20of%20one%20sucessor.md) and [WS1S](Monadic%20second%20order%20of%20one%20sucessor.md) are equally [expressive](expressiveness.md)==
 
 Proof:
 ([S1S](Monadic%20second%20order%20of%20one%20sucessor.md) $\rightarrow$ [WS1S](Monadic%20second%20order%20of%20one%20sucessor.md)):
@@ -286,7 +286,7 @@ We showed already that it is easy to constraint [S1S](Monadic%20second%20order%2
 
 ([WS1S](Monadic%20second%20order%20of%20one%20sucessor.md) $\rightarrow$ [S1S](Monadic%20second%20order%20of%20one%20sucessor.md)):
 Let us assume that $L \subseteq A^\omega$ is $\omega\text{-regular}$. By [Mc Naughtons Theorem](Theorem%2019.md), we know that $L$ can be expressed as a Boolean combination of languages of the form $\overrightarrow{w}$, with $\omega$ being regular.
-We show now how to characterize languages of the form $\overrightarrow{w}$, with $\omega$ being regular, with a formular of [WS1S](Monadic%20second%20order%20of%20one%20sucessor.md).
+We show now how to characterize languages of the form $\overrightarrow{w}$, with $\omega$ being regular, with a formula of [WS1S](Monadic%20second%20order%20of%20one%20sucessor.md).
 
 By the result about [S1S](Monadic%20second%20order%20of%20one%20sucessor.md) and [Finite State Automata](Finite%20State%20Automata.md), we know that there exists an [S1S](Monadic%20second%20order%20of%20one%20sucessor.md) formula $\phi(X_1,X_2,...,X_n)$ that defines the regular language $w$ accepted by a [FSA](Finite%20State%20Automata.md).
 
@@ -303,4 +303,4 @@ $\forall x \exists y(x<y \land (\psi(X_1,X_2,\dots,X_n)))$
 
 # 6 Summarizing we have this relations:
 
-![](Verification%2027_image_12.png)
+![](Summary%20for%20learning_image_1.png)

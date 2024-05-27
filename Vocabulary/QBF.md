@@ -1,3 +1,9 @@
+---
+aliases:
+  - Quantified Boolean formulas
+---
+
+
 <mark style="background: #014E11F2;">Vocabulary:</mark> 
 - Boolean variables $\sum = \{p,q,r...\}$
 - Boolean connectives $\land,\lor,\neg,\iff,\implies$

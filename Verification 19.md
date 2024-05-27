@@ -123,7 +123,7 @@ $$\mathcal{A}=\{Q,A,\Delta, q_0,F\}$$
 All states are similarly defined as in [[Non Deterministic Finite State Atomata|NFA]]
 
 $\Delta \subseteq Q \times A \times Q$ 
-$Q$ is the set of states. This means that $\Delta$ is the set of states reachable from a state when reading in a word from $A$. Why are this mutliple states? Because it is [[Non deterministic]]
+$Q$ is the set of states. This means that $\Delta$ is the set of states reachable from a state when reading in a word from $A$. Why are this mutliple states? Because it is [Determinism](Determinism.md)
 
 ## 3.1 [[P-Computation]]
 
@@ -132,11 +132,12 @@ A [[P-Computation]] of $\mathcal{A}$ on an [[omega-words|w-word]] $\alpha$ is an
 	$\sigma(0)=q_0$
 2. [[Rule of Consequentiality]]
 	for all $i \geq 0$ $(\delta(i),\alpha(i),\delta(i+1) \in \Delta$ 
-3. termination computation
-4. We say that a [[P-Computation]] $\sigma$ on $\alpha$ is sucessfull if $In(\sigma) \cap F \neq \emptyset$. 
+	i.e. there always needs to be a next state $\delta$ 
+1. termination computation
+2. We say that a [[P-Computation]] $\sigma$ on $\alpha$ is successful if $In(\sigma) \cap F \neq \emptyset$. 
 	This means that at least one state of  $\sigma$ is repeated infinitely many times and this state describe a state that is also a final state i.e. is member of $F$.
 
-The [[Deterministic Finite State Automata|Automaton]] $\mathcal{A}$ accepts a word $\alpha$ if there exists at least one successful computation ([[Non deterministic]]) of the Automaton on $\alpha$.
+The [[Deterministic Finite State Automata|Automaton]] $\mathcal{A}$ accepts a word $\alpha$ if there exists at least one successful computation ([non-deterministic](Determinism.md)) of the Automaton on $\alpha$.
 
 The language accepted by the [[Deterministic Finite State Automata|Automaton]] $\mathcal{A}$ is the set of all [[omega-words|w-word]]s  accepted by the [[Deterministic Finite State Automata|Automaton]].
 

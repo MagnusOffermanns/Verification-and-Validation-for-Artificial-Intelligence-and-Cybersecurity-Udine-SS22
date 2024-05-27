@@ -16,7 +16,7 @@ But there are quicker ways of wining for the spoiler. For instance by the tactic
 
 ### 0.1.1 Examples
 ==Board==
-![[Pasted image 20220422130100.png|700]]
+![[Verification 8_image_1.png|700]]
 
 ==Turn one==
 <mark style="background: #FF5582A6;">Spoiler:</mark> 
@@ -26,31 +26,31 @@ Chooses a node exactly in the middle of all the nodes in $S$.
 Reacts by choosing the middle point of $S'$.
 
 ==next Turns==
-The <mark style="background: #FF5582A6;">spoiler</mark> divides the nodes every turn further. The <mark style="background: #014E11F2;">duplicator</mark> has to respond by dividing $S'$ until eventually on the side the <mark style="background: #FF5582A6;">spoiler</mark> plays there exists a node between two nodes and on the side the <mark style="background: #014E11F2;">duplicator</mark> 26plays there is no node that is between those two nodes and he fails. This tactic has __logarithmic runtime__ in relation to the number of nodes i.e. log(n) with n being the number of nodes.
+The <mark style="background: #FF5582A6;">spoiler</mark> divides the nodes every turn further. The <mark style="background: #014E11F2;">duplicator</mark> has to respond by dividing $S'$ until eventually on the side the <mark style="background: #FF5582A6;">spoiler</mark> plays there exists a node between two nodes and on the side the <mark style="background: #014E11F2;">duplicator</mark> plays there is no node that is between those two nodes and he fails. This tactic has __logarithmic runtime__ in relation to the number of nodes i.e. log(n) with n being the number of nodes.
 
-![[Pasted image 20220422130932.png| Second turn both sides choosing the middle node]]
+![[Verification 8_image_2.png| Second turn both sides choosing the middle node]]
 
-![[Pasted image 20220422131243.png| Consecutive turns halfing the nodes more and more]]
+![[Verification 8_image_3.png| Consecutive turns halfing the nodes more and more]]
 
 ## 0.2 Are there structures where the Duplicator can survive an arbitrary amount of rounds but not infinitely?
 
 ### 0.2.1 Example
 ==Board:==
-![[Pasted image 20220422131843.png]]
+![[Verification 8_image_4.png]]
 
 $S=(\mathbb{Z},<)$ are the ordered natural numbers.
 $S'=(\{1,2\}\times \mathbb{Z},<_{lex})$ are two sets of ordered natural numbers. One note: If two nodes are in different sets of the natural numbers their ordering still holds. Nodes that are further right have a higher value than values on the left. The lex stands for [[lexicographic ordering]].
 
 ==Turn one:==
 The Spoiler choose a node in $S'$. And The duplicator responds by choosing a node in $S$
-![[Pasted image 20220422142801.png]]
+![[Verification 8_image_5.png]]
 ==Turn two:==
 Maybe Spoiler chooses a node right next to the first node it set. Duplicator can still respond.
-![[Pasted image 20220422142900.png]]
+![[Verification 8_image_6.png]]
 
 ==Turn three:==
 The Spoiler chooses now a node on the other set of $\mathbb{Z}$. Now the Duplicator has in his hand how long he will survive. Depending on how far away he puts his node away from his first two nodes the longer he will survive. But not infinitely. 
-![[Pasted image 20220422142954.png]]
+![[Verification 8_image_7.png]]
 
 ==In the following turns==
 The spoiler will now using the tactic he used in the previous example: Divide and conquer. He will try to set the dividing stone on the second set of $\mathbb{Z}$ one further away from the middle than it is possible for the Duplicator. Then by halving the distance at some point the Spoiler will be able to go on dividing while the Duplicator can not.  Then the duplicator looses.
@@ -77,7 +77,7 @@ When we combine [[Theorem 1]] and [[Lemma 10]] we can substitute the "''are [[n-
 What does this mean for our example above?
 
 The property $P=${every two points are at a finite distance} is __not__ definable in [[FO - First order logic|FO]] since $S \in P$ but $S' \not \in P$. The reasoning is the following:
->As all points are at a finite distance from each other in $S=(\mathbb{Z},<)$ but  there exist two points in $S'=(\{1,2\}\times \mathbb{Z},<_{lex})$ where the distance between those is infinite. For instance the points $\{\emptyset,1\}$ and $\{1,\emptyset\}$ where the first only has an element in  $\mathbb{Z}_2$ and the second has only an element in $\mathbb{Z}_1$
+	As all points are at a finite distance from each other in $S=(\mathbb{Z},<)$ but  there exist two points in $S'=(\{1,2\}\times \mathbb{Z},<_{lex})$ where the distance between those is infinite. For instance the points $\{\emptyset,1\}$ and $\{1,\emptyset\}$ where the first only has an element in  $\mathbb{Z}_2$ and the second has only an element in $\mathbb{Z}_1$
 
 ## 1.1 Example:
 P={Connected Graphs}
@@ -85,30 +85,30 @@ Question: given $n$ find $S\in P$ and $S \not \in P$ where the duplicator can su
 
 One structure which is a connected graph is the following and will be our $S$. The __size of our circle depends on the n__ which we can freely choose beforehand:
 
-![[Circle connected graph.png|400]]
+![[Verification 8_image_8.png|400]]
 
 
 The Structure $S'$ that does not fulfill the property P is are two not connected graphs:
 
-![[circle not connected graph.png|600]]
+![[Verification 8_image_9.png|600]]
 
 ==Turn 1:==
 In the turn one Spoiler and Duplicator start in the same way.
-![[circle graph turn 1.png]]
+![[Verification 8_image_10.png]]
 
 ==Turn 2==
 Now we do the obligatory move as before. The Spoiler chooses a second node on the first circle and the Duplicator responds.
-![[circle graph turn 2.png]]
+![[Verification 8_image_11.png]]
 
 ==Turn three== 
 Now the Spoiler chooses a node on the second circle. Now the Duplicator is in trouble he will choose a node on the first circle that is as far as possible away from the first two chosen nodes that it gets unveiled as late as possible that the two structures are the same.
 
-![[circle graph turn 4.png]]
+![[Verification 8_image_12.png]]
 
 ==The remaining n turns:==
 The Spoiler will engage again into the tactic of divide and conquer cutting the distance between the nodes 3 and 2 always in half. After $log(nr\_nodes/2)$ turns there will be a two nodes that are right next to each other on the left, but there will be another node in circle two then the Spoiler will win.
 
-This means that the property of __connectedness__ i.e. P={Connected Graphs} is not definable in [[FO - First order logic|FO]].
+This means that the property of [Connectedness](Connectedness.md) i.e. P={Connected Graphs} is not definable in [[FO - First order logic|FO]].
 
 We anticipated this already in the previous classes as to define [[Connectedness]] [[FO Resolution]] would need some kind of principle of induction
 
@@ -120,24 +120,24 @@ We anticipated this already in the previous classes as to define [[Connectedness
  
  ==Board==
  We have two structures with a even number of elements $S$ ($2^n$) and a structure $S'$ with an uneven number of elements ($2^n+1$)
-![[even_cardinality_turn1.png|600]]
+![[Verification 8_image_13.png|600]]
 
 ==Turn 1==
  The first turn happens like always. The Spoiler chooses the very left node, the Duplicator chooses the very left node to respond
-![[Selection_153.png|600]]
+![[Verification 8_image_14.png|600]]
 
 ==Turn 2==
 Now the Spoiler plays a pebble to the left of the first pebble he played in $S$. Then the duplicator responds by choosing a node that is as far away as possible from the first chosen node position in $S'$. Hereby the distance between $1$ and $2$ in $S$ is even while in $S'$ the number of elements between $1$ and $2$ is uneven.
-![[Selection_154.png|600]]
+![[Verification 8_image_15.png|600]]
 
 ==Turn 3==
 From turn 3 on the Spoiler changes each turn between $S$ and $S'$ to force the Duplicator to choose nodes that are closer and closer to the initial node he choose.
-![[Selection_155.png|600]]
+![[Verification 8_image_16.png|600]]
 
 ==The following turns:==
 The gab between the nodes get smaller and smaller at some point we see that the two two chains are not the same b
 
-Question: 
+>[!Question] 
 > why does the Spoiler not do Divide and conquer?
 > why is the game not always over after 3 rounds as the Spoiler chooses how far the second chosen node is away from the first chosen node?
 
@@ -150,8 +150,7 @@ Other examples of properties not definable in [[FO Resolution]] are:
 2. [[finiteness]]
 3. [[parity]] (even/odd)
 4. [[2-colorability]]
-5. [[finiteness]] 
-6. [[acyclicity]]
+5. [acyclicity](acyclicity)
  
  
   Example: [[finiteness]]
@@ -163,28 +162,28 @@ Other examples of properties not definable in [[FO Resolution]] are:
  
  The spoiler wins when he is able to force the Duplicator to choose the first element of the $-\mathbb{Z}$ as in $S$ the vertices left are always valued less than the vertices right. But at the point where $\mathbb{Z}$ and $-\mathbb{Z}$ meet we have that the left element is valued more than the vertice one further right.
  
- Question: Why not choose a finite set of nodes  ($2^n$) and a infinite set of nodes ($\mathbb{Z}$) and then do divide and conquer. The duplicator can survive depending on how high the number n is.
+ >[!Question]
+ >Why not choose a finite set of nodes  ($2^n$) and a infinite set of nodes ($\mathbb{Z}$) and then do divide and conquer. The duplicator can survive depending on how high the number n is.
  
  Example: [[acyclicity]] 
  $S$ = a circle Graph
  $S'$ = ($\mathbb{Z},+1$) -> +1 is successor relation.
  
- ```ad-note 
- Title: Rule of thumb
- The two structures have to always look the same locally. That is why a finite line is not serving well in the example for [[acyclicity]] because the endnotes do not look similar to any other node in $S$.
- ```
+ >[!Rule of thumb]
+ >The two structures have to always look the same locally. That is why a finite line is not serving well in the example for [[acyclicity]] because the endnotes do not look similar to any other node in $S$.
+ 
  
 # 2 Proof [[Theorem 1]]:
- ```ad-note
- title: [[Theorem 1]]
- $S$ and $S'$ are [[n-equivalence|n-equivalent]] $\iff$ the Duplicator survives n-rounds in the [[Ehrenfeucht-Fraise game]] $G_{S,S'}$
-```
+
+ >[!Note] [[Theorem 1]]
+ >$S$ and $S'$ are [[n-equivalence|n-equivalent]] $\iff$ the Duplicator survives n-rounds in the [[Ehrenfeucht-Fraise game]] $G_{S,S'}$
+
  
  We will prove it from left to right. First starting with the definition of [[n-equivalence]]
- ```ad-note
- title: [[n-equivalence]]
+ 
+ >[!Note] [[n-equivalence]]
  $S,S'$ are n-equivalent if for every $\phi$ with [[Quantifier rank]] n the following holds true: $S \models \phi \iff S' \models \phi$
- ```
+
  
  Now we can reinterpret the statement $S \models \phi$ and $S' \models \phi$ into a game theoretical term. How do we do [[Model-checking]] using a game: With the [[The evaluation game]]. That means $S \models \phi$ if Eve has a [[Strategy]] to win the [[The evaluation game]] $G_{S,\phi}$ every time. The same is true for $S'$: if Eve wins the [[The evaluation game]] $G_{S',phi}$ every time it follows that $S \models \phi$. 
  
@@ -236,7 +235,7 @@ Therefore we have to use the assumption that the Duplicator survives n rounds fr
 We want to know to which element $v \in U^{S'}$ we need to bind to still win the evaluation game. Therefore we look at how the [[Ehrenfeucht-Fraise game]] plays out.
 
 The spoiler will choose the pebble $u \in U^S$ to which the variable $x$ has been bound in [[The evaluation game]]. Then we look with which pebble the Duplicator responds to. He chooses a element v. We take this information and bind the variable $x$ in the game $G_{S',\phi}$ to the chosen element $v$ that was previously chosen by the Duplicator in the [[Ehrenfeucht-Fraise game|EF-game]]. This can be seen in the figure below.
-![[EF_proof.png|500]]
+![[Verification 8_image_17.png|500]]
 
 Why does this work? As the duplicator tries to maintain partial [[isomorphic|isomorphism]] the elements $v$ and $u$ are equivalent.
 
@@ -247,7 +246,7 @@ $$\forall x \phi(x)$$
 When having a universal quantifier Adam chooses which element $v \in U^{S'}$ he binds to x. 
 To figure out how we have to react in the evaluation game we use the [[Ehrenfeucht-Fraise game|EF-game]] in the other direction. We let Spoiler choose the pebble $v \in S'$. Then the Duplicator responds with a pebble $u \in S$.  We then choose the element $u$ chosen by the duplicator in our [[The evaluation game|evaluation game]] $G_{S'\phi}$. Because the duplicator wants to maintain partial [[isomorphic|isomorphism]] we know that the chosen $u$ and $v$ are equivalent and hereby we can be sure that we also win  $G_{S,\phi}$. (see image)
 
-![[Selection_157.png|500]]
+![[Verification 8_image_18.png|500]]
 
 > [!note] How many rounds can we use the [[Ehrenfeucht-Fraise game|EF-game]] to help us bind the elements in the [[The evaluation game|evaluation game]]?
 > As we know that the duplicator can only survive n rounds we can use the [[Ehrenfeucht-Fraise game|EF-game]] only for n nested quantifications.
@@ -292,7 +291,7 @@ $$\phi_S^0= \bigwedge \alpha \land \bigwedge \neg \beta$$
 
 $\alpha$ and $\beta$ are [[atomic]] meaning it does not have free variables for instance $R()$.
 
-- $\alpha$ are all formulas which are modeled by S i.e. $S \models \alpha$
+- $\alpha$ are all formulas which are modeled by $S$ i.e. $S \models \alpha$
 - $\beta$ are all formulas that do not model $S$ i.e. $S \not \models \beta$. Therefore we have a $\neg$ infront of $\beta$ in the definition of $\phi_S^0$ to make it be modeled by $S$.
 
 ==induction step==
@@ -318,7 +317,7 @@ Eve on the other side  in game $G_{S,\phi}$  will bind $x$ to $u$ and in the gam
 
 The Duplicator will choose the by Eve chosen node $v$
 
-![[Selection_158.png|500]]
+![[Verification 8_image_19.png|500]]
 
 ### 2.7.3 Spoiler plays in $S'$ in the [[Ehrenfeucht-Fraise game|EF-game]] 
 Initially Spoiler places a pebble $v \in U^{S'}$.
@@ -337,7 +336,7 @@ The response of Adam in the [[The evaluation game|evaluation game]] $G_{S,\phi}$
 As we also know that $S \models \phi_S^n$ for as it is equivalent for formulas of [[Quantifier rank]] n because of [[n-equivalence]]. That means Eve can savely choose the
 disjunct $\phi_{S_u}^{n-1}$ for n turns without losing.
 
-![[Selection_159.png|500]]
+![[Verification 8_image_20.png|500]]
 
 ### 2.7.4 To Summarize:
 We proofed [[Theorem 1]]:
@@ -350,15 +349,15 @@ What can we learn from this:
 	
 	In easy words this means that $\phi'$ can be expressed in [[FO - First order logic|FO]] if one can construct $\phi'$ from a disjunction of [[Hintikka Formula]]s $\phi_S^n$ 
 
-# 3 [[Synthesis]]
+# 3 [Synthesis Problem](Synthesis%20Problem.md)
 
 We have a reachability problem i.e. we have $k$ bits in one configuration of 1's and 0's and we want to know if there is a formula that we can reach another configuration of bits.
 
-Here with [[Synthesis]] it gets a bit more complicated. We do not have full control over all bits just about a subset of $l$ bits while $l<k$ while k is the number of bits.
+Here with [Synthesis Problem](Synthesis%20Problem.md) it gets a bit more complicated. We do not have full control over all bits just about a subset of $l$ bits while $l<k$ while k is the number of bits.
 
 The question is now can we reach our configuration independently of how the environment influences the bits that we do not have control over?
 
-![[Attachments/Selection_160.png]] 
+![[Verification 8_image_21.png]] 
 
 
 A tiny bit more formally:
@@ -366,7 +365,7 @@ A tiny bit more formally:
 -  the environment (we do not have any control over them) controlls the bits $\bar{q_i}$ (<mark style="background: #FF5582A6;">red</mark> ).
 
 We could represent it in a [[QBF]] formula like this:
-$$\forall \bar{q_1}\exists\bar{p_1}...\forall \bar{q_{k-l}}\exists\bar{p_l}\phi_{path}(\bar{q_1}\bar{p_1}... \bar{q_{k-l}}\\bar{p_l}$$
+$$\forall \bar{q_1}\exists\bar{p_1}...\forall \bar{q_{k-l}}\exists\bar{p_l}\phi_{path}(\bar{q_1}\bar{p_1}... \bar{q_{k-l}}\ \bar{p_l})$$
 
 Then one can run a [[The evaluation game|evaluation game]] to check if the formula is fulfilable independent of the bits we do not control.
 
