@@ -65,5 +65,5 @@ What does the formula mean?
 If $p$ turns true again after we saw the $q$ turn true, $q$ will have to be true at some point after the $n^{th}$ occurrence of $p$
 
 
-![](Verification%2035_image_1.png)
+![](temporal%20logic_image_2.png)
 
